@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E5C6503-E141-4DEC-A930-58C0E4DE0D30}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InfinniPlatform.PrintViewDesigner</RootNamespace>
+    <AssemblyName>InfinniPlatform.PrintViewDesigner</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>false</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_TeamCity|AnyCPU'">
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.2">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Data.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v13.2">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Core.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v13.2.Extensions">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Core.v13.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v13.2">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Docking.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v13.2">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Grid.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v13.2.Core">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Grid.v13.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v13.2.Extensions">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Grid.v13.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v13.2.Core">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Layout.v13.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v13.2">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.LayoutControl.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Mvvm.v13.2">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Mvvm.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisLight.v13.2">
+      <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Themes.MetropolisLight.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfinniPlatform.Core, Version=1.7.0.882, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InfinniPlatform.Core.1.7.0.882-master\lib\net45\InfinniPlatform.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="InfinniPlatform.Expressions, Version=1.7.0.882, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InfinniPlatform.Expressions.1.7.0.882-master\lib\net45\InfinniPlatform.Expressions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="InfinniPlatform.FlowDocument, Version=1.7.0.882, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InfinniPlatform.FlowDocument.1.7.0.882-master\lib\net45\InfinniPlatform.FlowDocument.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="InfinniPlatform.Sdk, Version=1.7.0.882, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InfinniPlatform.Sdk.1.7.0.882-master\lib\net45\InfinniPlatform.Sdk.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.2.2\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.1.2.2\lib\net45\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reflection.Metadata, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.2.0\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="zxing, Version=0.14.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.14.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\.files\Packaging\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\AppClipboard.cs" />
+    <Compile Include="Controls\Commands\PrintElementCommands.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementListItemsNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementListItemTemplateNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementTableColumnCellTemplateNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementTableColumnHeaderNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementTableColumnsNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementTableRowsNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\BuildHelper.cs" />
+    <Compile Include="Common\AppClipboardEntry.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Views\PrintViewStyleNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Views\PrintViewStylesNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Views\PrintViewBlocksNodeFactory.cs" />
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorBorder.xaml.cs">
+      <DependentUpon>PropertyEditorBorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorDisplayFormat.xaml.cs">
+      <DependentUpon>PropertyEditorDisplayFormat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorDisplayFormatDialog.xaml.cs">
+      <DependentUpon>PropertyEditorDisplayFormatDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorFontSize.xaml.cs">
+      <DependentUpon>PropertyEditorFontSize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorViewType.xaml.cs">
+      <DependentUpon>PropertyEditorViewType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorFontFamily.xaml.cs">
+      <DependentUpon>PropertyEditorFontFamily.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorFont.xaml.cs">
+      <DependentUpon>PropertyEditorFont.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorColumnSize.xaml.cs">
+      <DependentUpon>PropertyEditorColumnSize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorBarcodeQrErrorCorrection.xaml.cs">
+      <DependentUpon>PropertyEditorBarcodeQrErrorCorrection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorImageStretch.xaml.cs">
+      <DependentUpon>PropertyEditorImageStretch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorVisibility.xaml.cs">
+      <DependentUpon>PropertyEditorVisibility.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorTextDecoration.xaml.cs">
+      <DependentUpon>PropertyEditorTextDecoration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorTextCase.xaml.cs">
+      <DependentUpon>PropertyEditorTextCase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorListMarkerStyle.xaml.cs">
+      <DependentUpon>PropertyEditorListMarkerStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorStyle.xaml.cs">
+      <DependentUpon>PropertyEditorStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorMarkerOffsetSize.xaml.cs">
+      <DependentUpon>PropertyEditorMarkerOffsetSize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorIndentSize.xaml.cs">
+      <DependentUpon>PropertyEditorIndentSize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorTextAlignment.xaml.cs">
+      <DependentUpon>PropertyEditorTextAlignment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorRotation.xaml.cs">
+      <DependentUpon>PropertyEditorRotation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorImage.xaml.cs">
+      <DependentUpon>PropertyEditorImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorSize.xaml.cs">
+      <DependentUpon>PropertyEditorSize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyEditorBase.cs" />
+    <Compile Include="Controls\PropertyGrid\PropertyEditorBoolean.xaml.cs">
+      <DependentUpon>PropertyEditorBoolean.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorSizeUnit.xaml.cs">
+      <DependentUpon>PropertyEditorSizeUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGridExtensions\PropertyEditorThickness.xaml.cs">
+      <DependentUpon>PropertyEditorThickness.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyEditorLongString.xaml.cs">
+      <DependentUpon>PropertyEditorLongString.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ValueConverters\BooleanValueConverter.cs" />
+    <Compile Include="Controls\ValueConverters\BooleanFormatValueConverter.cs" />
+    <Compile Include="Controls\ValueConverters\ImageValueConverter.cs" />
+    <Compile Include="Controls\ValueConverters\DisplayFormatValueConverter.cs" />
+    <Compile Include="Controls\ValueConverters\DateTimeFormatValueConverter.cs" />
+    <Compile Include="Controls\ValueConverters\NumberFormatValueConverter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ViewModel\Blocks\FlowElementLineBuilder.cs" />
+    <Compile Include="ViewModel\Blocks\FlowElementListBuilder.cs" />
+    <Compile Include="ViewModel\Blocks\FlowElementPageBreakBuilder.cs" />
+    <Compile Include="ViewModel\Blocks\FlowElementParagraphBuilder.cs" />
+    <Compile Include="ViewModel\Blocks\FlowElementSectionBuilder.cs" />
+    <Compile Include="ViewModel\Blocks\FlowElementTableBuilder.cs" />
+    <Compile Include="ViewModel\FlowDocumentBuilder.cs" />
+    <Compile Include="ViewModel\FlowElementBuilderContext.cs" />
+    <Compile Include="ViewModel\FlowElementBuilderHelper.cs" />
+    <Compile Include="ViewModel\FlowElementFlowDocumentBuilder.cs" />
+    <Compile Include="ViewModel\IFlowElementBuilder.cs" />
+    <Compile Include="ViewModel\IFlowElementBuilderBase.cs" />
+    <Compile Include="ViewModel\Inlines\FlowElementBoldBuilder.cs" />
+    <Compile Include="ViewModel\Inlines\FlowElementHyperlinkBuilder.cs" />
+    <Compile Include="ViewModel\Inlines\FlowElementImageBuilder.cs" />
+    <Compile Include="ViewModel\Inlines\FlowElementItalicBuilder.cs" />
+    <Compile Include="ViewModel\Inlines\FlowElementLineBreakBuilder.cs" />
+    <Compile Include="ViewModel\Inlines\FlowElementRunBuilder.cs" />
+    <Compile Include="ViewModel\Inlines\FlowElementSpanBuilder.cs" />
+    <Compile Include="ViewModel\Inlines\FlowElementUnderlineBuilder.cs" />
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\PrintElementProperty\PrintElementPropertyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PrintElementToolbox\PrintElementToolboxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PrintViewDesigner\PrintViewDesignerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PrintViewTree\PrintViewTreeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PrintViewViewer\PrintViewViewerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorBorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorDisplayFormat.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorDisplayFormatDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorFontSize.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorViewType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorFontFamily.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorFont.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorColumnSize.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorBarcodeQrErrorCorrection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorImageStretch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorVisibility.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorTextDecoration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorTextCase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorListMarkerStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorMarkerOffsetSize.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorIndentSize.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorTextAlignment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorRotation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorSize.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGrid\PropertyEditorColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGrid\PropertyEditorDouble.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGrid\PropertyEditorEnum.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGrid\PropertyEditorInteger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGrid\PropertyEditorObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGrid\PropertyEditorBoolean.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGrid\PropertyEditorLongString.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGrid\PropertyEditorString.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorSizeUnit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyGridExtensions\PropertyEditorThickness.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PropertyGrid\PropertyGridControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Controls\PrintElementProperty\PrintElementPropertyControl.xaml.cs">
+      <DependentUpon>PrintElementPropertyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PrintElementToolbox\PrintElementToolboxControl.xaml.cs">
+      <DependentUpon>PrintElementToolboxControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PrintViewDesigner\PrintViewDesignerControl.xaml.cs">
+      <DependentUpon>PrintViewDesignerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementLineNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementListNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementPageBreakNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementParagraphNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementSectionNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementTableCellNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementTableColumnNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementTableNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Blocks\PrintElementTableRowNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementBarcodeEan13NodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementBarcodeQrNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementBoldNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementHyperlinkNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementImageNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementItalicNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementLineBreakNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementRunNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementSpanNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Inlines\PrintElementUnderlineNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\IPrintElementNodeFactory.cs" />
+    <Compile Include="Controls\PrintElementNode.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\PrintElementNodeBuilder.cs" />
+    <Compile Include="Controls\PrintViewTreeBuilders\Views\PrintViewNodeFactory.cs" />
+    <Compile Include="Controls\PrintViewTree\PrintViewTreeBuilder.cs" />
+    <Compile Include="Controls\PrintViewTree\PrintViewTreeControl.xaml.cs">
+      <DependentUpon>PrintViewTreeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PrintViewTree\PrintViewTreeImageSelector.cs" />
+    <Compile Include="Controls\PrintViewViewer\PrintViewViewerControl.xaml.cs">
+      <DependentUpon>PrintViewViewerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyCollection.cs" />
+    <Compile Include="Controls\PropertyGrid\PropertyDefinition.cs" />
+    <Compile Include="Controls\PropertyGrid\PropertyEditorColor.xaml.cs">
+      <DependentUpon>PropertyEditorColor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyEditorDouble.xaml.cs">
+      <DependentUpon>PropertyEditorDouble.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyEditorEnum.xaml.cs">
+      <DependentUpon>PropertyEditorEnum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyEditorInteger.xaml.cs">
+      <DependentUpon>PropertyEditorInteger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyEditorObject.xaml.cs">
+      <DependentUpon>PropertyEditorObject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyEditorString.xaml.cs">
+      <DependentUpon>PropertyEditorString.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyGridControl.xaml.cs">
+      <DependentUpon>PropertyGridControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyGrid\PropertyRegister.cs" />
+    <Compile Include="Controls\PropertyValueChangedEventArgs.cs" />
+    <Compile Include="Controls\PropertyValueChangedEventHandler.cs" />
+    <Compile Include="Controls\ValueConverters\ColorValueConverter.cs" />
+    <Compile Include="Controls\ValueConverters\DoubleValueConverter.cs" />
+    <Compile Include="Controls\ValueConverters\IntegerValueConverter.cs" />
+    <Compile Include="Controls\ValueConverters\StringValueConverter.cs" />
+    <Compile Include="Controls\PrintElementProperty\PrintElementPropertyEditorFactory.cs" />
+    <Compile Include="Controls\Helpers.cs" />
+    <Compile Include="Images\ImageRepository.cs" />
+    <Compile Include="Controls\ValueConverters\ResourceImageValueConverter.cs" />
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Install.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintElementLine.png" />
+    <Resource Include="Images\Elements\PrintElementList.png" />
+    <Resource Include="Images\Elements\PrintElementPageBreak.png" />
+    <Resource Include="Images\Elements\PrintElementParagraph.png" />
+    <Resource Include="Images\Elements\PrintElementSection.png" />
+    <Resource Include="Images\Elements\PrintElementTable.png" />
+    <Resource Include="Images\Border\BorderAll.png" />
+    <Resource Include="Images\Border\BorderBottom.png" />
+    <Resource Include="Images\Border\BorderLeft.png" />
+    <Resource Include="Images\Border\BorderNone.png" />
+    <Resource Include="Images\Border\BorderRight.png" />
+    <Resource Include="Images\Border\BorderTop.png" />
+    <Resource Include="Images\Common\Copy.png" />
+    <Resource Include="Images\Common\Cut.png" />
+    <Resource Include="Images\Common\Delete.png" />
+    <Resource Include="Images\Common\MoveDown.png" />
+    <Resource Include="Images\Common\MoveUp.png" />
+    <Resource Include="Images\Common\Paste.png" />
+    <Resource Include="Images\Elements\PrintElementBarcodeEan13.png" />
+    <Resource Include="Images\Elements\PrintElementBarcodeQr.png" />
+    <Resource Include="Images\Elements\PrintElementBold.png" />
+    <Resource Include="Images\Elements\PrintElementHyperlink.png" />
+    <Resource Include="Images\Elements\PrintElementImage.png" />
+    <Resource Include="Images\Elements\PrintElementItalic.png" />
+    <Resource Include="Images\Elements\PrintElementLineBreak.png" />
+    <Resource Include="Images\Elements\PrintElementRun.png" />
+    <Resource Include="Images\Elements\PrintElementSpan.png" />
+    <Resource Include="Images\Elements\PrintElementUnderline.png" />
+    <Resource Include="Images\TextAlignment\TextAlignmentCenter.png" />
+    <Resource Include="Images\TextAlignment\TextAlignmentJustify.png" />
+    <Resource Include="Images\TextAlignment\TextAlignmentLeft.png" />
+    <Resource Include="Images\TextAlignment\TextAlignmentRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintElementTableCell.png" />
+    <Resource Include="Images\Elements\PrintElementTableColumn.png" />
+    <Resource Include="Images\Elements\PrintElementTableRow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintElementListItemTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintElementListItems.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintElementTableColumnHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintElementTableColumnCellTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintElementTableRows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintElementTableColumns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Size\SizeHeight.png" />
+    <Resource Include="Images\Size\SizeWidth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Thickness\ThicknessAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Thickness\ThicknessLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Thickness\ThicknessRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Thickness\ThicknessTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Thickness\ThicknessBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Rotation\Rotate0.png" />
+    <Resource Include="Images\Rotation\Rotate180.png" />
+    <Resource Include="Images\Rotation\Rotate270.png" />
+    <Resource Include="Images\Rotation\Rotate90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Elements\PrintViewBlocks.png" />
+    <Resource Include="Images\Elements\PrintViewStyle.png" />
+    <Resource Include="Images\Elements\PrintViewStyles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Indent\IndentDecrease.png" />
+    <Resource Include="Images\Indent\IndentIncrease.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Common\CollapseAll.png" />
+    <Resource Include="Images\Common\ExpandAll.png" />
+    <Resource Include="Images\Common\Preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Common\Export.png" />
+    <Resource Include="Images\Common\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

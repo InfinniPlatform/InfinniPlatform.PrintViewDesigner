@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppearanceCategory" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="CommonCategory" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="FontFamilyProperty" xml:space="preserve">
+    <value>Family</value>
+  </data>
+  <data name="FontSizeProperty" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="FontSizeUnitProperty" xml:space="preserve">
+    <value>SizeUnit</value>
+  </data>
+  <data name="FontStretchProperty" xml:space="preserve">
+    <value>Stretch</value>
+  </data>
+  <data name="FontStyleProperty" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="FontVariantProperty" xml:space="preserve">
+    <value>Variant</value>
+  </data>
+  <data name="FontWeightProperty" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="LayoutCategory" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="BackgroundProperty" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="BorderProperty" xml:space="preserve">
+    <value>Border</value>
+  </data>
+  <data name="BorderColorProperty" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="BorderThicknessProperty" xml:space="preserve">
+    <value>Thickness</value>
+  </data>
+  <data name="MarginProperty" xml:space="preserve">
+    <value>Margin</value>
+  </data>
+  <data name="PaddingProperty" xml:space="preserve">
+    <value>Padding</value>
+  </data>
+  <data name="TextAlignmentProperty" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="FontProperty" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="ForegroundProperty" xml:space="preserve">
+    <value>Foreground</value>
+  </data>
+  <data name="TextDecorationProperty" xml:space="preserve">
+    <value>Decoration</value>
+  </data>
+  <data name="NameProperty" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SourceProperty" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="StyleProperty" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="TextCaseProperty" xml:space="preserve">
+    <value>Case</value>
+  </data>
+  <data name="VisibilityProperty" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="TextCategory" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="ThicknessAllProperty" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ThicknessBottomProperty" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="ThicknessLeftProperty" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="ThicknessRightProperty" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="ThicknessSizeUnitProperty" xml:space="preserve">
+    <value>SizeUnit</value>
+  </data>
+  <data name="ThicknessTopProperty" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="DataCategory" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="ParagraphIndentSizeProperty" xml:space="preserve">
+    <value>IndentSize</value>
+  </data>
+  <data name="ParagraphIndentSizeUnitProperty" xml:space="preserve">
+    <value>IndentSizeUnit</value>
+  </data>
+  <data name="RunSourceFormatProperty" xml:space="preserve">
+    <value>SourceFormat</value>
+  </data>
+  <data name="RunTextProperty" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="PrintElementPropertyDockPanel" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="PrintViewTreeDockPanel" xml:space="preserve">
+    <value>Tree</value>
+  </data>
+  <data name="PrintViewViewerDockPanel" xml:space="preserve">
+    <value>Viewer</value>
+  </data>
+  <data name="CaptionProperty" xml:space="preserve">
+    <value>Caption</value>
+  </data>
+  <data name="DescriptionProperty" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="PageCategory" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="PagePaddingProperty" xml:space="preserve">
+    <value>Padding</value>
+  </data>
+  <data name="PageSizeProperty" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="SizeHeightProperty" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="SizeSizeUnitProperty" xml:space="preserve">
+    <value>SizeUnit</value>
+  </data>
+  <data name="SizeWidthProperty" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="StylesProperty" xml:space="preserve">
+    <value>Styles</value>
+  </data>
+  <data name="ViewTypeProperty" xml:space="preserve">
+    <value>ViewType</value>
+  </data>
+  <data name="BarcodeEan13" xml:space="preserve">
+    <value>BarcodeEan13</value>
+  </data>
+  <data name="BarcodeQr" xml:space="preserve">
+    <value>BarcodeQr</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="Hyperlink" xml:space="preserve">
+    <value>Hyperlink</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>LineBreak</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="PageBreak" xml:space="preserve">
+    <value>PageBreak</value>
+  </data>
+  <data name="Paragraph" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="Run" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="Section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="Span" xml:space="preserve">
+    <value>Span</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="Underline" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="PrintViewDesignerName" xml:space="preserve">
+    <value>PrintView</value>
+  </data>
+  <data name="DeleteElementQuestion" xml:space="preserve">
+    <value>Delete element '{0}'?</value>
+  </data>
+  <data name="CannotInsertChildElement" xml:space="preserve">
+    <value>Does not allowed to insert '{0}' into '{1}'.</value>
+  </data>
+  <data name="CannotBePastedIntoItself" xml:space="preserve">
+    <value>The element cannot be pasted into itself.</value>
+  </data>
+  <data name="CannotInsertParentIntoChild" xml:space="preserve">
+    <value>The destination element '{0}' is a subitem of the source element '{1}'.</value>
+  </data>
+  <data name="BarcodeCategory" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="BarcodeEan13CalcCheckSumProperty" xml:space="preserve">
+    <value>CalcCheckSum</value>
+  </data>
+  <data name="BarcodeEan13RotationProperty" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="BarcodeEan13WideBarRatioProperty" xml:space="preserve">
+    <value>WideBarRatio</value>
+  </data>
+  <data name="ImageCategory" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ImageDataProperty" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="ImageRotationProperty" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="ImageSizeProperty" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="ImageStretchProperty" xml:space="preserve">
+    <value>Stretch</value>
+  </data>
+  <data name="ListCategory" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="ListMarkerOffsetSizeProperty" xml:space="preserve">
+    <value>MarkerOffsetSize</value>
+  </data>
+  <data name="ListMarkerOffsetSizeUnitProperty" xml:space="preserve">
+    <value>MarkerOffsetSizeUnit</value>
+  </data>
+  <data name="ListMarkerStyleProperty" xml:space="preserve">
+    <value>MarkerStyle</value>
+  </data>
+  <data name="ShowHeaderProperty" xml:space="preserve">
+    <value>ShowHeader</value>
+  </data>
+  <data name="ShowTextProperty" xml:space="preserve">
+    <value>ShowText</value>
+  </data>
+  <data name="ListStartIndexProperty" xml:space="preserve">
+    <value>StartIndex</value>
+  </data>
+  <data name="TableCategory" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="BarcodeQrErrorCorrectionProperty" xml:space="preserve">
+    <value>ErrorCorrection</value>
+  </data>
+  <data name="BarcodeQrRotationProperty" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="HyperlinkReferenceProperty" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="HyperlinkSourceFormatProperty" xml:space="preserve">
+    <value>SourceFormat</value>
+  </data>
+  <data name="ReplaceElementQuestion" xml:space="preserve">
+    <value>Replace content '{0}' on '{1}'?</value>
+  </data>
+  <data name="TableCell" xml:space="preserve">
+    <value>TableCell</value>
+  </data>
+  <data name="TableColumn" xml:space="preserve">
+    <value>TableColumn</value>
+  </data>
+  <data name="TableRow" xml:space="preserve">
+    <value>TableRow</value>
+  </data>
+  <data name="ListItems" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="ListItemTemplate" xml:space="preserve">
+    <value>ItemTemplate</value>
+  </data>
+  <data name="PrintView" xml:space="preserve">
+    <value>PrintView</value>
+  </data>
+  <data name="TableColumnCellTemplate" xml:space="preserve">
+    <value>CellTemplate</value>
+  </data>
+  <data name="TableColumnHeader" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="TableColumns" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="TableRows" xml:space="preserve">
+    <value>Rows</value>
+  </data>
+  <data name="SizeUnitCm" xml:space="preserve">
+    <value>Cm</value>
+  </data>
+  <data name="SizeUnitIn" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="SizeUnitMm" xml:space="preserve">
+    <value>Mm</value>
+  </data>
+  <data name="SizeUnitPt" xml:space="preserve">
+    <value>Pt</value>
+  </data>
+  <data name="SizeUnitPx" xml:space="preserve">
+    <value>Px</value>
+  </data>
+  <data name="RotationRotate0" xml:space="preserve">
+    <value>Rotate0</value>
+  </data>
+  <data name="RotationRotate180" xml:space="preserve">
+    <value>Rotate180</value>
+  </data>
+  <data name="RotationRotate270" xml:space="preserve">
+    <value>Rotate270</value>
+  </data>
+  <data name="RotationRotate90" xml:space="preserve">
+    <value>Rotate90</value>
+  </data>
+  <data name="TextAlignmentCenter" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="TextAlignmentJustify" xml:space="preserve">
+    <value>Justify</value>
+  </data>
+  <data name="TextAlignmentLeft" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="TextAlignmentRight" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="ParagraphIndent" xml:space="preserve">
+    <value>Indent</value>
+  </data>
+  <data name="ListMarkerOffset" xml:space="preserve">
+    <value>MarkerOffset</value>
+  </data>
+  <data name="StylesEditorDialog" xml:space="preserve">
+    <value>Styles</value>
+  </data>
+  <data name="PrintViewStylePropertiesDockPanel" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="PrintViewStylesDockPanel" xml:space="preserve">
+    <value>Styles</value>
+  </data>
+  <data name="PrintViewBlocks" xml:space="preserve">
+    <value>Blocks</value>
+  </data>
+  <data name="PrintViewStyle" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="PrintViewStyles" xml:space="preserve">
+    <value>Styles</value>
+  </data>
+  <data name="ColumnSizeProperty" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="ColumnSizeUnitProperty" xml:space="preserve">
+    <value>SizeUnit</value>
+  </data>
+  <data name="TableCellColumnSpanProperty" xml:space="preserve">
+    <value>ColumnSpan</value>
+  </data>
+  <data name="TableCellRowSpanProperty" xml:space="preserve">
+    <value>RowSpan</value>
+  </data>
+  <data name="ListMarkerStyleBox" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="ListMarkerStyleCircle" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="ListMarkerStyleDecimal" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+  <data name="ListMarkerStyleDisc" xml:space="preserve">
+    <value>Disc</value>
+  </data>
+  <data name="ListMarkerStyleLowerLatin" xml:space="preserve">
+    <value>LowerLatin</value>
+  </data>
+  <data name="ListMarkerStyleLowerRoman" xml:space="preserve">
+    <value>LowerRoman</value>
+  </data>
+  <data name="ListMarkerStyleNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ListMarkerStyleSquare" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="ListMarkerStyleUpperLatin" xml:space="preserve">
+    <value>UpperLatin</value>
+  </data>
+  <data name="ListMarkerStyleUpperRoman" xml:space="preserve">
+    <value>UpperRoman</value>
+  </data>
+  <data name="FontStretchCondensed" xml:space="preserve">
+    <value>Condensed</value>
+  </data>
+  <data name="FontStretchExpanded" xml:space="preserve">
+    <value>Expanded</value>
+  </data>
+  <data name="FontStretchExtraCondensed" xml:space="preserve">
+    <value>ExtraCondensed</value>
+  </data>
+  <data name="FontStretchExtraExpanded" xml:space="preserve">
+    <value>ExtraExpanded</value>
+  </data>
+  <data name="FontStretchNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="FontStretchSemiCondensed" xml:space="preserve">
+    <value>SemiCondensed</value>
+  </data>
+  <data name="FontStretchSemiExpanded" xml:space="preserve">
+    <value>SemiExpanded</value>
+  </data>
+  <data name="FontStretchUltraCondensed" xml:space="preserve">
+    <value>UltraCondensed</value>
+  </data>
+  <data name="FontStretchUltraExpanded" xml:space="preserve">
+    <value>UltraExpanded</value>
+  </data>
+  <data name="FontStyleItalic" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="FontStyleNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="FontStyleOblique" xml:space="preserve">
+    <value>Oblique</value>
+  </data>
+  <data name="FontVariantNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="FontVariantSubscript" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="FontVariantSuperscript" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="FontWeightBold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="FontWeightExtraBold" xml:space="preserve">
+    <value>ExtraBold</value>
+  </data>
+  <data name="FontWeightExtraLight" xml:space="preserve">
+    <value>ExtraLight</value>
+  </data>
+  <data name="FontWeightLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="FontWeightMedium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="FontWeightNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="FontWeightSemiBold" xml:space="preserve">
+    <value>SemiBold</value>
+  </data>
+  <data name="FontWeightUltraBold" xml:space="preserve">
+    <value>UltraBold</value>
+  </data>
+  <data name="FontWeightUltraLight" xml:space="preserve">
+    <value>UltraLight</value>
+  </data>
+  <data name="TextCaseLowercase" xml:space="preserve">
+    <value>Lowercase</value>
+  </data>
+  <data name="TextCaseNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="TextCaseSentenceCase" xml:space="preserve">
+    <value>SentenceCase</value>
+  </data>
+  <data name="TextCaseToggleCase" xml:space="preserve">
+    <value>ToggleCase</value>
+  </data>
+  <data name="TextCaseUppercase" xml:space="preserve">
+    <value>Uppercase</value>
+  </data>
+  <data name="TextDecorationNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="TextDecorationOverline" xml:space="preserve">
+    <value>Overline</value>
+  </data>
+  <data name="TextDecorationStrikethrough" xml:space="preserve">
+    <value>Strikethrough</value>
+  </data>
+  <data name="TextDecorationUnderline" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="ImageStretchFill" xml:space="preserve">
+    <value>Fill</value>
+  </data>
+  <data name="ImageStretchNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ImageStretchUniform" xml:space="preserve">
+    <value>Uniform</value>
+  </data>
+  <data name="PropertyEditorBarcodeQrErrorCorrectionHigh" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="PropertyEditorBarcodeQrErrorCorrectionLow" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="PropertyEditorBarcodeQrErrorCorrectionMedium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="PropertyEditorBarcodeQrErrorCorrectionQuartile" xml:space="preserve">
+    <value>Quartile</value>
+  </data>
+  <data name="ViewTypeListView" xml:space="preserve">
+    <value>ListView</value>
+  </data>
+  <data name="ViewTypeObjectView" xml:space="preserve">
+    <value>ObjectView</value>
+  </data>
+  <data name="VisibilityAlways" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="VisibilityNever" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="VisibilitySource" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="BooleanFormat" xml:space="preserve">
+    <value>Boolean, '{0}', '{1}'</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>DateTime, '{0}'</value>
+  </data>
+  <data name="NumberFormat" xml:space="preserve">
+    <value>Number, '{0}'</value>
+  </data>
+  <data name="ObjectFormat" xml:space="preserve">
+    <value>Object, '{0}'</value>
+  </data>
+  <data name="PropertyEditorDisplayFormatDialog" xml:space="preserve">
+    <value>Display Format</value>
+  </data>
+  <data name="BooleanFormatTabHeader" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DateTimeFormatTabHeader" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="GeneralFormatTabHeader" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="NumberFormatTabHeader" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="ObjectFormatTabHeader" xml:space="preserve">
+    <value>Object</value>
+  </data>
+  <data name="AcceptButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="BooleanFormatFalseText" xml:space="preserve">
+    <value>False value text:</value>
+  </data>
+  <data name="BooleanFormatTrueText" xml:space="preserve">
+    <value>True value text:</value>
+  </data>
+  <data name="DateTimeFormatSample" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="NumberFormatSample" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="CollapseAll" xml:space="preserve">
+    <value>Collapse All</value>
+  </data>
+  <data name="ExpandAll" xml:space="preserve">
+    <value>Expand All</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="InspectElement" xml:space="preserve">
+    <value>Inspect element</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export to File</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import from File</value>
+  </data>
+  <data name="RelpaceCurrentPrintView" xml:space="preserve">
+    <value>Replace current PrintView?</value>
+  </data>
+  <data name="SourceExpression" xml:space="preserve">
+    <value>Expression</value>
+  </data>
+</root>
