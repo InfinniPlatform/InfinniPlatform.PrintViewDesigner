@@ -1,0 +1,75 @@
+﻿<dx:DXWindow x:Class="InfinniPlatform.PrintViewDesigner.PreviewPanel.Panel.PrintViewPreviewDataDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:properties="clr-namespace:InfinniPlatform.PrintViewDesigner.Properties"
+             Title="{x:Static properties:Resources.PrintViewPreviewDataDialog}"
+             WindowStartupLocation="CenterScreen"
+             WindowStyle="ToolWindow"
+             WindowState="Normal"
+             ShowIcon="False"
+             Width="520"
+             Height="420">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <dxe:TextEdit x:Name="JsonEditor"
+                      Grid.Row="0"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2"
+                      TextWrapping="NoWrap"
+                      VerticalContentAlignment="Top"
+                      HorizontalContentAlignment="Left"
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Auto"
+                      EditValue="123"
+                      />
+        
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left">
+            <Button Width="80"
+                    Height="25"
+                    Margin="1,0,0,0"
+                    IsDefault="True"
+                    Content="{x:Static properties:Resources.ReformatButton}"
+                    Click="OnReformatButton" />
+            <Button Width="80"
+                    Height="25"
+                    Margin="1,0,0,0"
+                    IsDefault="True"
+                    Content="{x:Static properties:Resources.ResetButton}"
+                    Click="OnResetButton" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button Width="80"
+                    Height="25"
+                    Margin="1,0,0,0"
+                    IsDefault="True"
+                    Content="{x:Static properties:Resources.AcceptButton}"
+                    Click="OnAcceptButton" />
+            <Button Width="80"
+                    Height="25"
+                    Margin="1,0,0,0"
+                    IsCancel="True"
+                    Content="{x:Static properties:Resources.CancelButton}"
+                    Click="OnCancelButton" />
+        </StackPanel>
+
+    </Grid>
+
+</dx:DXWindow>

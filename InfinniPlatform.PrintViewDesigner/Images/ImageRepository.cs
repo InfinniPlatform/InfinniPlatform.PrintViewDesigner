@@ -42,8 +42,7 @@ namespace InfinniPlatform.PrintViewDesigner.Images
                 {
                     try
                     {
-                        var imagResource =
-                            Resources.FirstOrDefault(r => Regex.IsMatch(r, imagePath, RegexOptions.IgnoreCase));
+                        var imagResource = Resources.FirstOrDefault(r => Regex.IsMatch(r, imagePath, RegexOptions.IgnoreCase));
 
                         if (imagResource != null)
                         {
@@ -85,7 +84,7 @@ namespace InfinniPlatform.PrintViewDesigner.Images
 
         private static string GetImagePath(string[] path)
         {
-            if (path != null && path.Length > 0)
+            if ((path != null) && (path.Length > 0))
             {
                 var pathPattern = new StringBuilder("Images/");
 

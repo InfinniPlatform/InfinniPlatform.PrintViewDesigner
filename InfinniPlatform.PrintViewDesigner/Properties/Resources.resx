@@ -225,7 +225,7 @@
   <data name="RunSourceFormatProperty" xml:space="preserve">
     <value>SourceFormat</value>
   </data>
-  <data name="RunTextProperty" xml:space="preserve">
+  <data name="TextProperty" xml:space="preserve">
     <value>Text</value>
   </data>
   <data name="PrintElementPropertyDockPanel" xml:space="preserve">
@@ -266,54 +266,6 @@
   </data>
   <data name="ViewTypeProperty" xml:space="preserve">
     <value>ViewType</value>
-  </data>
-  <data name="BarcodeEan13" xml:space="preserve">
-    <value>BarcodeEan13</value>
-  </data>
-  <data name="BarcodeQr" xml:space="preserve">
-    <value>BarcodeQr</value>
-  </data>
-  <data name="Bold" xml:space="preserve">
-    <value>Bold</value>
-  </data>
-  <data name="Hyperlink" xml:space="preserve">
-    <value>Hyperlink</value>
-  </data>
-  <data name="Image" xml:space="preserve">
-    <value>Image</value>
-  </data>
-  <data name="Italic" xml:space="preserve">
-    <value>Italic</value>
-  </data>
-  <data name="LineBreak" xml:space="preserve">
-    <value>LineBreak</value>
-  </data>
-  <data name="Line" xml:space="preserve">
-    <value>Line</value>
-  </data>
-  <data name="List" xml:space="preserve">
-    <value>List</value>
-  </data>
-  <data name="PageBreak" xml:space="preserve">
-    <value>PageBreak</value>
-  </data>
-  <data name="Paragraph" xml:space="preserve">
-    <value>Paragraph</value>
-  </data>
-  <data name="Run" xml:space="preserve">
-    <value>Run</value>
-  </data>
-  <data name="Section" xml:space="preserve">
-    <value>Section</value>
-  </data>
-  <data name="Span" xml:space="preserve">
-    <value>Span</value>
-  </data>
-  <data name="Table" xml:space="preserve">
-    <value>Table</value>
-  </data>
-  <data name="Underline" xml:space="preserve">
-    <value>Underline</value>
   </data>
   <data name="Copy" xml:space="preserve">
     <value>Copy</value>
@@ -414,15 +366,6 @@
   <data name="ReplaceElementQuestion" xml:space="preserve">
     <value>Replace content '{0}' on '{1}'?</value>
   </data>
-  <data name="TableCell" xml:space="preserve">
-    <value>TableCell</value>
-  </data>
-  <data name="TableColumn" xml:space="preserve">
-    <value>TableColumn</value>
-  </data>
-  <data name="TableRow" xml:space="preserve">
-    <value>TableRow</value>
-  </data>
   <data name="ListItems" xml:space="preserve">
     <value>Items</value>
   </data>
@@ -431,9 +374,6 @@
   </data>
   <data name="PrintView" xml:space="preserve">
     <value>PrintView</value>
-  </data>
-  <data name="TableColumnCellTemplate" xml:space="preserve">
-    <value>CellTemplate</value>
   </data>
   <data name="TableColumnHeader" xml:space="preserve">
     <value>Header</value>
@@ -498,14 +438,8 @@
   <data name="PrintViewStylesDockPanel" xml:space="preserve">
     <value>Styles</value>
   </data>
-  <data name="PrintViewBlocks" xml:space="preserve">
-    <value>Blocks</value>
-  </data>
   <data name="PrintViewStyle" xml:space="preserve">
     <value>Style</value>
-  </data>
-  <data name="PrintViewStyles" xml:space="preserve">
-    <value>Styles</value>
   </data>
   <data name="ColumnSizeProperty" xml:space="preserve">
     <value>Size</value>
@@ -738,8 +672,8 @@
   <data name="ExpandAll" xml:space="preserve">
     <value>Expand All</value>
   </data>
-  <data name="Preview" xml:space="preserve">
-    <value>Preview</value>
+  <data name="PreviewPdf" xml:space="preserve">
+    <value>Preview as PDF</value>
   </data>
   <data name="InspectElement" xml:space="preserve">
     <value>Inspect element</value>
@@ -755,5 +689,143 @@
   </data>
   <data name="SourceExpression" xml:space="preserve">
     <value>Expression</value>
+  </data>
+  <data name="PrintBarcodeEan13Node" xml:space="preserve">
+    <value>EAN13</value>
+    <comment>PrintElementNodeType.PrintBarcodeEan13Node</comment>
+  </data>
+  <data name="PrintBarcodeQrNode" xml:space="preserve">
+    <value>QR</value>
+    <comment>PrintElementNodeType.PrintBarcodeQrNode</comment>
+  </data>
+  <data name="PrintBoldNode" xml:space="preserve">
+    <value>Bold</value>
+    <comment>PrintElementNodeType.PrintBoldNode</comment>
+  </data>
+  <data name="PrintDocumentBlocksNode" xml:space="preserve">
+    <value>Blocks</value>
+    <comment>PrintElementNodeType.PrintDocumentBlocksNode</comment>
+  </data>
+  <data name="PrintDocumentNode" xml:space="preserve">
+    <value>Document</value>
+    <comment>PrintElementNodeType.PrintDocumentNode</comment>
+  </data>
+  <data name="PrintDocumentStylesNode" xml:space="preserve">
+    <value>Styles</value>
+    <comment>PrintElementNodeType.PrintDocumentStylesNode</comment>
+  </data>
+  <data name="PrintHyperlinkNode" xml:space="preserve">
+    <value>Hyperlink</value>
+    <comment>PrintElementNodeType.PrintHyperlinkNode</comment>
+  </data>
+  <data name="PrintImageNode" xml:space="preserve">
+    <value>Image</value>
+    <comment>PrintElementNodeType.PrintImageNode</comment>
+  </data>
+  <data name="PrintItalicNode" xml:space="preserve">
+    <value>Italic</value>
+    <comment>PrintElementNodeType.PrintItalicNode</comment>
+  </data>
+  <data name="PrintLineBreakNode" xml:space="preserve">
+    <value>LineBreak</value>
+    <comment>PrintElementNodeType.PrintLineBreakNode</comment>
+  </data>
+  <data name="PrintLineNode" xml:space="preserve">
+    <value>Line</value>
+    <comment>PrintElementNodeType.PrintLineNode</comment>
+  </data>
+  <data name="PrintListItemsNode" xml:space="preserve">
+    <value>Items</value>
+    <comment>PrintElementNodeType.PrintListItemsNode</comment>
+  </data>
+  <data name="PrintListItemTemplateNode" xml:space="preserve">
+    <value>ItemTemplate</value>
+    <comment>PrintElementNodeType.PrintListItemTemplateNode</comment>
+  </data>
+  <data name="PrintListNode" xml:space="preserve">
+    <value>List</value>
+    <comment>PrintElementNodeType.PrintListNode</comment>
+  </data>
+  <data name="PrintPageBreakNode" xml:space="preserve">
+    <value>PageBreak</value>
+    <comment>PrintElementNodeType.PrintPageBreakNode</comment>
+  </data>
+  <data name="PrintParagraphNode" xml:space="preserve">
+    <value>Paragraph</value>
+    <comment>PrintElementNodeType.PrintParagraphNode</comment>
+  </data>
+  <data name="PrintRunNode" xml:space="preserve">
+    <value>Run</value>
+    <comment>PrintElementNodeType.PrintRunNode</comment>
+  </data>
+  <data name="PrintSectionNode" xml:space="preserve">
+    <value>Section</value>
+    <comment>PrintElementNodeType.PrintSectionNode</comment>
+  </data>
+  <data name="PrintSpanNode" xml:space="preserve">
+    <value>Span</value>
+    <comment>PrintElementNodeType.PrintSpanNode</comment>
+  </data>
+  <data name="PrintStyleNode" xml:space="preserve">
+    <value>Style</value>
+    <comment>PrintElementNodeType.PrintStyleNode</comment>
+  </data>
+  <data name="PrintTableCellNode" xml:space="preserve">
+    <value>Cell</value>
+    <comment>PrintElementNodeType.PrintTableCellNode</comment>
+  </data>
+  <data name="PrintTableColumnCellTemplateNode" xml:space="preserve">
+    <value>CellTemplate</value>
+    <comment>PrintElementNodeType.PrintTableColumnCellTemplateNode</comment>
+  </data>
+  <data name="PrintTableColumnHeaderNode" xml:space="preserve">
+    <value>Header</value>
+    <comment>PrintElementNodeType.PrintTableColumnHeaderNode</comment>
+  </data>
+  <data name="PrintTableColumnNode" xml:space="preserve">
+    <value>Column</value>
+    <comment>PrintElementNodeType.PrintTableColumnNode</comment>
+  </data>
+  <data name="PrintTableColumnsNode" xml:space="preserve">
+    <value>Columns</value>
+    <comment>PrintElementNodeType.PrintTableColumnsNode</comment>
+  </data>
+  <data name="PrintTableNode" xml:space="preserve">
+    <value>Table</value>
+    <comment>PrintElementNodeType.PrintTableNode</comment>
+  </data>
+  <data name="PrintTableRowCellsNode" xml:space="preserve">
+    <value>Cells</value>
+    <comment>PrintElementNodeType.PrintTableRowCellsNode</comment>
+  </data>
+  <data name="PrintTableRowNode" xml:space="preserve">
+    <value>Row</value>
+    <comment>PrintElementNodeType.PrintTableRowNode</comment>
+  </data>
+  <data name="PrintTableRowsNode" xml:space="preserve">
+    <value>Rows</value>
+    <comment>PrintElementNodeType.PrintTableRowsNode</comment>
+  </data>
+  <data name="PrintUnderlineNode" xml:space="preserve">
+    <value>Underline</value>
+    <comment>PrintElementNodeType.PrintUnderlineNode</comment>
+  </data>
+  <data name="PreviewHtml" xml:space="preserve">
+    <value>Preview as HTML</value>
+  </data>
+  <data name="PreviewData" xml:space="preserve">
+    <value>Preview Data</value>
+  </data>
+  <data name="ResetButton" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="PrintViewPreviewDataDialog" xml:space="preserve">
+    <value>Preview Data</value>
+  </data>
+  <data name="ReformatButton" xml:space="preserve">
+    <value>Reformat</value>
+  </data>
+  <data name="SourceJsonHasWrongFormat" xml:space="preserve">
+    <value>Source JSON has wrong format: '{0}'.</value>
   </data>
 </root>

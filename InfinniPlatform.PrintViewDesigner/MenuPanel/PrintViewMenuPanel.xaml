@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="InfinniPlatform.PrintViewDesigner.MenuPanel.PrintViewMenuPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars">
+
+    <dxb:BarManager Name="ToolboxBarManager"
+                    Height="50"
+                    AllowCustomization="False"
+                    AllowHotCustomization="False"
+                    AllowQuickCustomization="False"
+                    ToolbarGlyphSize="Small"
+                    DataContext="{x:Null}">
+
+        <dxb:BarManager.Bars>
+
+            <dxb:Bar Name="ToolboxCreateElementBar"
+                     AllowDrop="False"
+                     ShowDragWidget="False"
+                     AllowCustomizationMenu="False"
+                     AllowHide="False"
+                     UseWholeRow="True"
+                     AllowQuickCustomization="False">
+                <dxb:Bar.DockInfo>
+                    <dxb:BarDockInfo ContainerType="Top" />
+                </dxb:Bar.DockInfo>
+            </dxb:Bar>
+
+            <dxb:Bar Name="ToolboxModifyElementBar"
+                     AllowDrop="False"
+                     ShowDragWidget="False"
+                     AllowCustomizationMenu="False"
+                     AllowHide="False"
+                     UseWholeRow="True"
+                     AllowQuickCustomization="False">
+                <dxb:Bar.DockInfo>
+                    <dxb:BarDockInfo ContainerType="Top" />
+                </dxb:Bar.DockInfo>
+            </dxb:Bar>
+
+        </dxb:BarManager.Bars>
+
+    </dxb:BarManager>
+
+</UserControl>

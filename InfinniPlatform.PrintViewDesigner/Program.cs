@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-using InfinniPlatform.PrintViewDesigner.Views;
+using InfinniPlatform.PrintViewDesigner.MainView;
 
 namespace InfinniPlatform.PrintViewDesigner
 {
@@ -10,7 +10,7 @@ namespace InfinniPlatform.PrintViewDesigner
         [STAThread]
         private static void Main()
         {
-            new Application { MainWindow = new MainWindow { Visibility = Visibility.Visible } }.Run();
+            new Application { MainWindow = new PrintViewDesignerWindow { Visibility = Visibility.Visible } }.Run();
         }
     }
 }

@@ -1,6 +1,0 @@
-﻿<propertyGrid:PropertyEditorBase
-    x:Class="InfinniPlatform.PrintViewDesigner.Controls.PropertyGridExtensions.PropertyEditorBorder"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:propertyGrid="clr-namespace:InfinniPlatform.PrintViewDesigner.Controls.PropertyGrid">
-</propertyGrid:PropertyEditorBase>

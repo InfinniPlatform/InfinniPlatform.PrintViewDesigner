@@ -1,0 +1,16 @@
+﻿<editors:PropertyEditorBase x:Class="InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.Common.EnumEditor"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                            xmlns:editors="clr-namespace:InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors">
+
+    <dxe:ComboBoxEdit x:Name="Editor"
+                      Foreground="Black"
+                      IsTextEditable="False"
+                      AllowNullInput="True"
+                      NullValue="{x:Null}"
+                      ValueMember="Key"
+                      DisplayMember="Value"
+                      EditValue="{Binding Path=EditValue, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type editors:PropertyEditorBase}}, UpdateSourceTrigger=PropertyChanged}" />
+
+</editors:PropertyEditorBase>

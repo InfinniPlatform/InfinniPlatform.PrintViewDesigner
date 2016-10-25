@@ -1,0 +1,68 @@
+﻿<editors:PropertyEditorBase x:Class="InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.Specific.SizeEditor"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:properties="clr-namespace:InfinniPlatform.PrintViewDesigner.Properties"
+                            xmlns:editors="clr-namespace:InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors"
+                            xmlns:common="clr-namespace:InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.Common"
+                            xmlns:specific="clr-namespace:InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.Specific">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" MinWidth="52" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" MinWidth="52" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="52" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Width -->
+
+        <Image Grid.Row="0"
+               Grid.Column="0"
+               Margin="1"
+               Stretch="None"
+               Source="../../../Images/Size/SizeWidth.png"
+               ToolTip="{x:Static properties:Resources.SizeWidthProperty}" />
+
+        <common:DoubleEditor x:Name="WidthEditor"
+                             Grid.Row="0"
+                             Grid.Column="1"
+                             Margin="1,0,1,0"
+                             MinValue="0"
+                             MaxValue="10000"
+                             Caption="{x:Static properties:Resources.SizeWidthProperty}"
+                             ToolTip="{x:Static properties:Resources.SizeWidthProperty}" />
+
+        <!-- Height -->
+
+        <Image Grid.Row="0"
+               Grid.Column="2"
+               Margin="1"
+               Stretch="None"
+               Source="../../../Images/Size/SizeHeight.png"
+               ToolTip="{x:Static properties:Resources.SizeHeightProperty}" />
+
+        <common:DoubleEditor x:Name="HeightEditor"
+                             Grid.Row="0"
+                             Grid.Column="3"
+                             Margin="1,0,1,0"
+                             MinValue="0"
+                             MaxValue="10000"
+                             Caption="{x:Static properties:Resources.SizeHeightProperty}"
+                             ToolTip="{x:Static properties:Resources.SizeHeightProperty}" />
+
+        <!-- SizeUnit -->
+
+        <specific:SizeUnitEditor x:Name="SizeUnitEditor"
+                                 Grid.Row="0"
+                                 Grid.Column="5"
+                                 Margin="1,0,0,0"
+                                 Caption="{x:Static properties:Resources.SizeSizeUnitProperty}"
+                                 ToolTip="{x:Static properties:Resources.SizeSizeUnitProperty}" />
+    </Grid>
+
+</editors:PropertyEditorBase>

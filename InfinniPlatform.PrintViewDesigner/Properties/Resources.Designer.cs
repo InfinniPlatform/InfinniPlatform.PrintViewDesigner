@@ -97,15 +97,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BarcodeEan13.
-        /// </summary>
-        public static string BarcodeEan13 {
-            get {
-                return ResourceManager.GetString("BarcodeEan13", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to CalcCheckSum.
         /// </summary>
         public static string BarcodeEan13CalcCheckSumProperty {
@@ -133,15 +124,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BarcodeQr.
-        /// </summary>
-        public static string BarcodeQr {
-            get {
-                return ResourceManager.GetString("BarcodeQr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ErrorCorrection.
         /// </summary>
         public static string BarcodeQrErrorCorrectionProperty {
@@ -156,15 +138,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         public static string BarcodeQrRotationProperty {
             get {
                 return ResourceManager.GetString("BarcodeQrRotationProperty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Bold.
-        /// </summary>
-        public static string Bold {
-            get {
-                return ResourceManager.GetString("Bold", resourceCulture);
             }
         }
         
@@ -718,15 +691,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hyperlink.
-        /// </summary>
-        public static string Hyperlink {
-            get {
-                return ResourceManager.GetString("Hyperlink", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Reference.
         /// </summary>
         public static string HyperlinkReferenceProperty {
@@ -741,15 +705,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         public static string HyperlinkSourceFormatProperty {
             get {
                 return ResourceManager.GetString("HyperlinkSourceFormatProperty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Image.
-        /// </summary>
-        public static string Image {
-            get {
-                return ResourceManager.GetString("Image", resourceCulture);
             }
         }
         
@@ -844,47 +799,11 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Italic.
-        /// </summary>
-        public static string Italic {
-            get {
-                return ResourceManager.GetString("Italic", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Layout.
         /// </summary>
         public static string LayoutCategory {
             get {
                 return ResourceManager.GetString("LayoutCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Line.
-        /// </summary>
-        public static string Line {
-            get {
-                return ResourceManager.GetString("Line", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to LineBreak.
-        /// </summary>
-        public static string LineBreak {
-            get {
-                return ResourceManager.GetString("LineBreak", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to List.
-        /// </summary>
-        public static string List {
-            get {
-                return ResourceManager.GetString("List", resourceCulture);
             }
         }
         
@@ -1141,15 +1060,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PageBreak.
-        /// </summary>
-        public static string PageBreak {
-            get {
-                return ResourceManager.GetString("PageBreak", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Page.
         /// </summary>
         public static string PageCategory {
@@ -1173,15 +1083,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         public static string PageSizeProperty {
             get {
                 return ResourceManager.GetString("PageSizeProperty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Paragraph.
-        /// </summary>
-        public static string Paragraph {
-            get {
-                return ResourceManager.GetString("Paragraph", resourceCulture);
             }
         }
         
@@ -1222,11 +1123,83 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Preview.
+        ///   Looks up a localized string similar to Preview Data.
         /// </summary>
-        public static string Preview {
+        public static string PreviewData {
             get {
-                return ResourceManager.GetString("Preview", resourceCulture);
+                return ResourceManager.GetString("PreviewData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preview as HTML.
+        /// </summary>
+        public static string PreviewHtml {
+            get {
+                return ResourceManager.GetString("PreviewHtml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preview as PDF.
+        /// </summary>
+        public static string PreviewPdf {
+            get {
+                return ResourceManager.GetString("PreviewPdf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EAN13.
+        /// </summary>
+        public static string PrintBarcodeEan13Node {
+            get {
+                return ResourceManager.GetString("PrintBarcodeEan13Node", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to QR.
+        /// </summary>
+        public static string PrintBarcodeQrNode {
+            get {
+                return ResourceManager.GetString("PrintBarcodeQrNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bold.
+        /// </summary>
+        public static string PrintBoldNode {
+            get {
+                return ResourceManager.GetString("PrintBoldNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blocks.
+        /// </summary>
+        public static string PrintDocumentBlocksNode {
+            get {
+                return ResourceManager.GetString("PrintDocumentBlocksNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document.
+        /// </summary>
+        public static string PrintDocumentNode {
+            get {
+                return ResourceManager.GetString("PrintDocumentNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Styles.
+        /// </summary>
+        public static string PrintDocumentStylesNode {
+            get {
+                return ResourceManager.GetString("PrintDocumentStylesNode", resourceCulture);
             }
         }
         
@@ -1240,6 +1213,222 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hyperlink.
+        /// </summary>
+        public static string PrintHyperlinkNode {
+            get {
+                return ResourceManager.GetString("PrintHyperlinkNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image.
+        /// </summary>
+        public static string PrintImageNode {
+            get {
+                return ResourceManager.GetString("PrintImageNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Italic.
+        /// </summary>
+        public static string PrintItalicNode {
+            get {
+                return ResourceManager.GetString("PrintItalicNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LineBreak.
+        /// </summary>
+        public static string PrintLineBreakNode {
+            get {
+                return ResourceManager.GetString("PrintLineBreakNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line.
+        /// </summary>
+        public static string PrintLineNode {
+            get {
+                return ResourceManager.GetString("PrintLineNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Items.
+        /// </summary>
+        public static string PrintListItemsNode {
+            get {
+                return ResourceManager.GetString("PrintListItemsNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ItemTemplate.
+        /// </summary>
+        public static string PrintListItemTemplateNode {
+            get {
+                return ResourceManager.GetString("PrintListItemTemplateNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to List.
+        /// </summary>
+        public static string PrintListNode {
+            get {
+                return ResourceManager.GetString("PrintListNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PageBreak.
+        /// </summary>
+        public static string PrintPageBreakNode {
+            get {
+                return ResourceManager.GetString("PrintPageBreakNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragraph.
+        /// </summary>
+        public static string PrintParagraphNode {
+            get {
+                return ResourceManager.GetString("PrintParagraphNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Run.
+        /// </summary>
+        public static string PrintRunNode {
+            get {
+                return ResourceManager.GetString("PrintRunNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Section.
+        /// </summary>
+        public static string PrintSectionNode {
+            get {
+                return ResourceManager.GetString("PrintSectionNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Span.
+        /// </summary>
+        public static string PrintSpanNode {
+            get {
+                return ResourceManager.GetString("PrintSpanNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Style.
+        /// </summary>
+        public static string PrintStyleNode {
+            get {
+                return ResourceManager.GetString("PrintStyleNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cell.
+        /// </summary>
+        public static string PrintTableCellNode {
+            get {
+                return ResourceManager.GetString("PrintTableCellNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CellTemplate.
+        /// </summary>
+        public static string PrintTableColumnCellTemplateNode {
+            get {
+                return ResourceManager.GetString("PrintTableColumnCellTemplateNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Header.
+        /// </summary>
+        public static string PrintTableColumnHeaderNode {
+            get {
+                return ResourceManager.GetString("PrintTableColumnHeaderNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Column.
+        /// </summary>
+        public static string PrintTableColumnNode {
+            get {
+                return ResourceManager.GetString("PrintTableColumnNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Columns.
+        /// </summary>
+        public static string PrintTableColumnsNode {
+            get {
+                return ResourceManager.GetString("PrintTableColumnsNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table.
+        /// </summary>
+        public static string PrintTableNode {
+            get {
+                return ResourceManager.GetString("PrintTableNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cells.
+        /// </summary>
+        public static string PrintTableRowCellsNode {
+            get {
+                return ResourceManager.GetString("PrintTableRowCellsNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Row.
+        /// </summary>
+        public static string PrintTableRowNode {
+            get {
+                return ResourceManager.GetString("PrintTableRowNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rows.
+        /// </summary>
+        public static string PrintTableRowsNode {
+            get {
+                return ResourceManager.GetString("PrintTableRowsNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Underline.
+        /// </summary>
+        public static string PrintUnderlineNode {
+            get {
+                return ResourceManager.GetString("PrintUnderlineNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PrintView.
         /// </summary>
         public static string PrintView {
@@ -1249,20 +1438,20 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Blocks.
-        /// </summary>
-        public static string PrintViewBlocks {
-            get {
-                return ResourceManager.GetString("PrintViewBlocks", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to PrintView.
         /// </summary>
         public static string PrintViewDesignerName {
             get {
                 return ResourceManager.GetString("PrintViewDesignerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preview Data.
+        /// </summary>
+        public static string PrintViewPreviewDataDialog {
+            get {
+                return ResourceManager.GetString("PrintViewPreviewDataDialog", resourceCulture);
             }
         }
         
@@ -1281,15 +1470,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         public static string PrintViewStylePropertiesDockPanel {
             get {
                 return ResourceManager.GetString("PrintViewStylePropertiesDockPanel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Styles.
-        /// </summary>
-        public static string PrintViewStyles {
-            get {
-                return ResourceManager.GetString("PrintViewStyles", resourceCulture);
             }
         }
         
@@ -1366,6 +1546,15 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reformat.
+        /// </summary>
+        public static string ReformatButton {
+            get {
+                return ResourceManager.GetString("ReformatButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Replace current PrintView?.
         /// </summary>
         public static string RelpaceCurrentPrintView {
@@ -1380,6 +1569,15 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         public static string ReplaceElementQuestion {
             get {
                 return ResourceManager.GetString("ReplaceElementQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        public static string ResetButton {
+            get {
+                return ResourceManager.GetString("ResetButton", resourceCulture);
             }
         }
         
@@ -1420,38 +1618,11 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Run.
-        /// </summary>
-        public static string Run {
-            get {
-                return ResourceManager.GetString("Run", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to SourceFormat.
         /// </summary>
         public static string RunSourceFormatProperty {
             get {
                 return ResourceManager.GetString("RunSourceFormatProperty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Text.
-        /// </summary>
-        public static string RunTextProperty {
-            get {
-                return ResourceManager.GetString("RunTextProperty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Section.
-        /// </summary>
-        public static string Section {
-            get {
-                return ResourceManager.GetString("Section", resourceCulture);
             }
         }
         
@@ -1555,20 +1726,20 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Source JSON has wrong format: &apos;{0}&apos;..
+        /// </summary>
+        public static string SourceJsonHasWrongFormat {
+            get {
+                return ResourceManager.GetString("SourceJsonHasWrongFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Source.
         /// </summary>
         public static string SourceProperty {
             get {
                 return ResourceManager.GetString("SourceProperty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Span.
-        /// </summary>
-        public static string Span {
-            get {
-                return ResourceManager.GetString("Span", resourceCulture);
             }
         }
         
@@ -1602,27 +1773,9 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Table.
         /// </summary>
-        public static string Table {
-            get {
-                return ResourceManager.GetString("Table", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Table.
-        /// </summary>
         public static string TableCategory {
             get {
                 return ResourceManager.GetString("TableCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TableCell.
-        /// </summary>
-        public static string TableCell {
-            get {
-                return ResourceManager.GetString("TableCell", resourceCulture);
             }
         }
         
@@ -1645,24 +1798,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TableColumn.
-        /// </summary>
-        public static string TableColumn {
-            get {
-                return ResourceManager.GetString("TableColumn", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to CellTemplate.
-        /// </summary>
-        public static string TableColumnCellTemplate {
-            get {
-                return ResourceManager.GetString("TableColumnCellTemplate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Header.
         /// </summary>
         public static string TableColumnHeader {
@@ -1677,15 +1812,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         public static string TableColumns {
             get {
                 return ResourceManager.GetString("TableColumns", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TableRow.
-        /// </summary>
-        public static string TableRow {
-            get {
-                return ResourceManager.GetString("TableRow", resourceCulture);
             }
         }
         
@@ -1852,6 +1978,15 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string TextProperty {
+            get {
+                return ResourceManager.GetString("TextProperty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         public static string ThicknessAllProperty {
@@ -1902,15 +2037,6 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         public static string ThicknessTopProperty {
             get {
                 return ResourceManager.GetString("ThicknessTopProperty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Underline.
-        /// </summary>
-        public static string Underline {
-            get {
-                return ResourceManager.GetString("Underline", resourceCulture);
             }
         }
         

@@ -1,0 +1,12 @@
+<editors:PropertyEditorBase x:Class="InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.Specific.SizeUnitEditor"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:editors="clr-namespace:InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors"
+                            xmlns:common="clr-namespace:InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.Common"
+                            x:Name="Self">
+
+    <common:EnumEditor x:Name="Editor"
+                       EditValue="{Binding ElementName=Self, Path=EditValue, Mode=TwoWay}"
+                       Property="{Binding ElementName=Self, Path=Property, Mode=TwoWay}" />
+
+</editors:PropertyEditorBase>
