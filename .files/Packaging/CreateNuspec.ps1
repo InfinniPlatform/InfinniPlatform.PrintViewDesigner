@@ -94,7 +94,6 @@
         # Add project assembly
 
         $projectNuspec = $projectNuspec + "        <file target=""lib\$framework"" src=""$projectAssemblyName.exe"" />`r`n"
-        $projectRefs += "$projectName.$version\lib\$framework\$projectAssemblyName.exe"
 
         # Add resources for ru-RU (if exists)
 
@@ -103,7 +102,6 @@
         if ($projectResourcesRu -and $projectResourcesRu.Count -gt 0 -and $projectResourcesRu[0])
         {
             $projectNuspec = $projectNuspec + "        <file target=""lib\$framework\ru-RU"" src=""ru-RU\$projectAssemblyName.resources.dll"" />`r`n"
-            $projectRefs += "$projectName.$version\lib\$framework\ru-RU\$projectAssemblyName.resources.dll"
         }
 
         # Add resources for en-US (if exists)
@@ -113,18 +111,15 @@
         if ($projectResourcesEn -and $projectResourcesEn.Count -gt 0 -and $projectResourcesEn[0])
         {
             $projectNuspec = $projectNuspec + "        <file target=""lib\$framework\en-US"" src=""en-US\$projectAssemblyName.resources.dll"" />`r`n"
-            $projectRefs += "$projectName.$version\lib\$framework\en-US\$projectAssemblyName.resources.dll"
         }
 
         # Add symbol file
 
         $projectNuspec = $projectNuspec + "        <file target=""lib\$framework"" src=""$projectAssemblyName.pdb"" />`r`n"
-        $projectRefs += "$projectName.$version\lib\$framework\$projectAssemblyName.pdb"
 
         # Add config-file
 
         $projectNuspec = $projectNuspec + "        <file target=""lib\$framework"" src=""$projectAssemblyName.exe.config"" />`r`n"
-        $projectRefs += "$projectName.$version\lib\$framework\$projectAssemblyName.exe.config"
 
         # Add DevExpress files
 
