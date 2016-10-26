@@ -9,8 +9,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Inline
         {
             var boldNode = parentNode.CreateChildNode(PrintElementNodeType.PrintBoldNode, elementTemplate);
 
-            boldNode.ElementChildrenTypes = NodeBuilderHelper.InlineTypes;
-
             boldNode.CanCut = NodeBuilderHelper.CanCut(boldNode);
             boldNode.Cut = NodeBuilderHelper.Cut(boldNode);
 

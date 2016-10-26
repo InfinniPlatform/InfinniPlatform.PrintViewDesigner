@@ -24,8 +24,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Block
         {
             var itemTemplateNode = listNode.CreateChildNode(PrintElementNodeType.PrintListItemTemplateNode, list);
 
-            itemTemplateNode.ElementChildrenTypes = NodeBuilderHelper.BlockTypes;
-
             itemTemplateNode.CanPaste = NodeBuilderHelper.CanPaste(itemTemplateNode);
             itemTemplateNode.Paste = NodeBuilderHelper.Paste(itemTemplateNode);
 
@@ -41,8 +39,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Block
         private static void BuildListItems(NodeFactory factory, PrintElementNode listNode, PrintList list)
         {
             var itemsNode = listNode.CreateChildNode(PrintElementNodeType.PrintListItemsNode, list);
-
-            itemsNode.ElementChildrenTypes = NodeBuilderHelper.BlockTypes;
 
             itemsNode.CanPaste = NodeBuilderHelper.CanPaste(itemsNode);
             itemsNode.Paste = NodeBuilderHelper.Paste(itemsNode);

@@ -9,8 +9,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Block
         {
             var cellNode = parentNode.CreateChildNode(PrintElementNodeType.PrintTableCellNode, elementTemplate);
 
-            cellNode.ElementChildrenTypes = NodeBuilderHelper.BlockTypes;
-
             cellNode.CanCut = NodeBuilderHelper.CanCut(cellNode);
             cellNode.Cut = NodeBuilderHelper.Cut(cellNode);
 

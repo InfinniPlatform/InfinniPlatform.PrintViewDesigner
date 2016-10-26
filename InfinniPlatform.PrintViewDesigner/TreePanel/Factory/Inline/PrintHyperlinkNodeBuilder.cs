@@ -9,8 +9,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Inline
         {
             var hyperlinkNode = parentNode.CreateChildNode(PrintElementNodeType.PrintHyperlinkNode, elementTemplate);
 
-            hyperlinkNode.ElementChildrenTypes = NodeBuilderHelper.InlineTypes;
-
             hyperlinkNode.CanCut = NodeBuilderHelper.CanCut(hyperlinkNode);
             hyperlinkNode.Cut = NodeBuilderHelper.Cut(hyperlinkNode);
 

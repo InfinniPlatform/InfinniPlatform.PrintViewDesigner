@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Linq.Expressions;
+using System.Windows.Controls;
 
 using InfinniPlatform.PrintView.Model;
 using InfinniPlatform.PrintView.Model.Block;
 using InfinniPlatform.PrintView.Model.Format;
 using InfinniPlatform.PrintView.Model.Inline;
+using InfinniPlatform.PrintViewDesigner.Properties;
 using InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors;
 using InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.Common;
 using InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.Specific;
@@ -20,84 +22,84 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
         {
             EnumCache = new EditorEnumCache();
 
-            EnumCache.AddValue(PrintVisibility.Never, Properties.Resources.VisibilityNever)
-                     .AddValue(PrintVisibility.Always, Properties.Resources.VisibilityAlways)
-                     .AddValue(PrintVisibility.Source, Properties.Resources.VisibilitySource);
+            EnumCache.AddValue(PrintVisibility.Never, Resources.VisibilityNever)
+                     .AddValue(PrintVisibility.Always, Resources.VisibilityAlways)
+                     .AddValue(PrintVisibility.Source, Resources.VisibilitySource);
 
-            EnumCache.AddValue(PrintFontStyle.Normal, Properties.Resources.FontStyleNormal)
-                     .AddValue(PrintFontStyle.Italic, Properties.Resources.FontStyleItalic)
-                     .AddValue(PrintFontStyle.Oblique, Properties.Resources.FontStyleOblique);
+            EnumCache.AddValue(PrintFontStyle.Normal, Resources.FontStyleNormal)
+                     .AddValue(PrintFontStyle.Italic, Resources.FontStyleItalic)
+                     .AddValue(PrintFontStyle.Oblique, Resources.FontStyleOblique);
 
-            EnumCache.AddValue(PrintFontStretch.Normal, Properties.Resources.FontStretchNormal)
-                     .AddValue(PrintFontStretch.UltraCondensed, Properties.Resources.FontStretchUltraCondensed)
-                     .AddValue(PrintFontStretch.ExtraCondensed, Properties.Resources.FontStretchExtraCondensed)
-                     .AddValue(PrintFontStretch.Condensed, Properties.Resources.FontStretchCondensed)
-                     .AddValue(PrintFontStretch.SemiCondensed, Properties.Resources.FontStretchSemiCondensed)
-                     .AddValue(PrintFontStretch.SemiExpanded, Properties.Resources.FontStretchSemiExpanded)
-                     .AddValue(PrintFontStretch.Expanded, Properties.Resources.FontStretchExpanded)
-                     .AddValue(PrintFontStretch.ExtraExpanded, Properties.Resources.FontStretchExtraExpanded)
-                     .AddValue(PrintFontStretch.UltraExpanded, Properties.Resources.FontStretchUltraExpanded);
+            EnumCache.AddValue(PrintFontStretch.Normal, Resources.FontStretchNormal)
+                     .AddValue(PrintFontStretch.UltraCondensed, Resources.FontStretchUltraCondensed)
+                     .AddValue(PrintFontStretch.ExtraCondensed, Resources.FontStretchExtraCondensed)
+                     .AddValue(PrintFontStretch.Condensed, Resources.FontStretchCondensed)
+                     .AddValue(PrintFontStretch.SemiCondensed, Resources.FontStretchSemiCondensed)
+                     .AddValue(PrintFontStretch.SemiExpanded, Resources.FontStretchSemiExpanded)
+                     .AddValue(PrintFontStretch.Expanded, Resources.FontStretchExpanded)
+                     .AddValue(PrintFontStretch.ExtraExpanded, Resources.FontStretchExtraExpanded)
+                     .AddValue(PrintFontStretch.UltraExpanded, Resources.FontStretchUltraExpanded);
 
-            EnumCache.AddValue(PrintFontWeight.Normal, Properties.Resources.FontWeightNormal)
-                     .AddValue(PrintFontWeight.UltraLight, Properties.Resources.FontWeightUltraLight)
-                     .AddValue(PrintFontWeight.ExtraLight, Properties.Resources.FontWeightExtraLight)
-                     .AddValue(PrintFontWeight.Light, Properties.Resources.FontWeightLight)
-                     .AddValue(PrintFontWeight.Medium, Properties.Resources.FontWeightMedium)
-                     .AddValue(PrintFontWeight.SemiBold, Properties.Resources.FontWeightSemiBold)
-                     .AddValue(PrintFontWeight.Bold, Properties.Resources.FontWeightBold)
-                     .AddValue(PrintFontWeight.ExtraBold, Properties.Resources.FontWeightExtraBold)
-                     .AddValue(PrintFontWeight.UltraBold, Properties.Resources.FontWeightUltraBold);
+            EnumCache.AddValue(PrintFontWeight.Normal, Resources.FontWeightNormal)
+                     .AddValue(PrintFontWeight.UltraLight, Resources.FontWeightUltraLight)
+                     .AddValue(PrintFontWeight.ExtraLight, Resources.FontWeightExtraLight)
+                     .AddValue(PrintFontWeight.Light, Resources.FontWeightLight)
+                     .AddValue(PrintFontWeight.Medium, Resources.FontWeightMedium)
+                     .AddValue(PrintFontWeight.SemiBold, Resources.FontWeightSemiBold)
+                     .AddValue(PrintFontWeight.Bold, Resources.FontWeightBold)
+                     .AddValue(PrintFontWeight.ExtraBold, Resources.FontWeightExtraBold)
+                     .AddValue(PrintFontWeight.UltraBold, Resources.FontWeightUltraBold);
 
-            EnumCache.AddValue(PrintFontVariant.Normal, Properties.Resources.FontVariantNormal)
-                     .AddValue(PrintFontVariant.Subscript, Properties.Resources.FontVariantSubscript)
-                     .AddValue(PrintFontVariant.Superscript, Properties.Resources.FontVariantSuperscript);
+            EnumCache.AddValue(PrintFontVariant.Normal, Resources.FontVariantNormal)
+                     .AddValue(PrintFontVariant.Subscript, Resources.FontVariantSubscript)
+                     .AddValue(PrintFontVariant.Superscript, Resources.FontVariantSuperscript);
 
-            EnumCache.AddValue(PrintTextAlignment.Left, Properties.Resources.TextAlignmentLeft)
-                     .AddValue(PrintTextAlignment.Center, Properties.Resources.TextAlignmentCenter)
-                     .AddValue(PrintTextAlignment.Right, Properties.Resources.TextAlignmentRight)
-                     .AddValue(PrintTextAlignment.Justify, Properties.Resources.TextAlignmentJustify);
+            EnumCache.AddValue(PrintTextAlignment.Left, Resources.TextAlignmentLeft)
+                     .AddValue(PrintTextAlignment.Center, Resources.TextAlignmentCenter)
+                     .AddValue(PrintTextAlignment.Right, Resources.TextAlignmentRight)
+                     .AddValue(PrintTextAlignment.Justify, Resources.TextAlignmentJustify);
 
-            EnumCache.AddValue(PrintTextCase.Normal, Properties.Resources.TextCaseNormal)
-                     .AddValue(PrintTextCase.SentenceCase, Properties.Resources.TextCaseSentenceCase)
-                     .AddValue(PrintTextCase.Lowercase, Properties.Resources.TextCaseLowercase)
-                     .AddValue(PrintTextCase.Uppercase, Properties.Resources.TextCaseUppercase)
-                     .AddValue(PrintTextCase.ToggleCase, Properties.Resources.TextCaseToggleCase);
+            EnumCache.AddValue(PrintTextCase.Normal, Resources.TextCaseNormal)
+                     .AddValue(PrintTextCase.SentenceCase, Resources.TextCaseSentenceCase)
+                     .AddValue(PrintTextCase.Lowercase, Resources.TextCaseLowercase)
+                     .AddValue(PrintTextCase.Uppercase, Resources.TextCaseUppercase)
+                     .AddValue(PrintTextCase.ToggleCase, Resources.TextCaseToggleCase);
 
-            EnumCache.AddValue(PrintListMarkerStyle.None, Properties.Resources.ListMarkerStyleNone)
-                     .AddValue(PrintListMarkerStyle.Disc, Properties.Resources.ListMarkerStyleDisc)
-                     .AddValue(PrintListMarkerStyle.Circle, Properties.Resources.ListMarkerStyleCircle)
-                     .AddValue(PrintListMarkerStyle.Square, Properties.Resources.ListMarkerStyleSquare)
-                     .AddValue(PrintListMarkerStyle.Box, Properties.Resources.ListMarkerStyleBox)
-                     .AddValue(PrintListMarkerStyle.LowerRoman, Properties.Resources.ListMarkerStyleLowerRoman)
-                     .AddValue(PrintListMarkerStyle.UpperRoman, Properties.Resources.ListMarkerStyleUpperRoman)
-                     .AddValue(PrintListMarkerStyle.LowerLatin, Properties.Resources.ListMarkerStyleLowerLatin)
-                     .AddValue(PrintListMarkerStyle.UpperLatin, Properties.Resources.ListMarkerStyleUpperLatin)
-                     .AddValue(PrintListMarkerStyle.Decimal, Properties.Resources.ListMarkerStyleDecimal);
+            EnumCache.AddValue(PrintListMarkerStyle.None, Resources.ListMarkerStyleNone)
+                     .AddValue(PrintListMarkerStyle.Disc, Resources.ListMarkerStyleDisc)
+                     .AddValue(PrintListMarkerStyle.Circle, Resources.ListMarkerStyleCircle)
+                     .AddValue(PrintListMarkerStyle.Square, Resources.ListMarkerStyleSquare)
+                     .AddValue(PrintListMarkerStyle.Box, Resources.ListMarkerStyleBox)
+                     .AddValue(PrintListMarkerStyle.LowerRoman, Resources.ListMarkerStyleLowerRoman)
+                     .AddValue(PrintListMarkerStyle.UpperRoman, Resources.ListMarkerStyleUpperRoman)
+                     .AddValue(PrintListMarkerStyle.LowerLatin, Resources.ListMarkerStyleLowerLatin)
+                     .AddValue(PrintListMarkerStyle.UpperLatin, Resources.ListMarkerStyleUpperLatin)
+                     .AddValue(PrintListMarkerStyle.Decimal, Resources.ListMarkerStyleDecimal);
 
-            EnumCache.AddValue(PrintTextDecoration.Normal, Properties.Resources.TextDecorationNormal)
-                     .AddValue(PrintTextDecoration.OverLine, Properties.Resources.TextDecorationOverline)
-                     .AddValue(PrintTextDecoration.Strikethrough, Properties.Resources.TextDecorationStrikethrough)
-                     .AddValue(PrintTextDecoration.Underline, Properties.Resources.TextDecorationUnderline);
+            EnumCache.AddValue(PrintTextDecoration.Normal, Resources.TextDecorationNormal)
+                     .AddValue(PrintTextDecoration.OverLine, Resources.TextDecorationOverline)
+                     .AddValue(PrintTextDecoration.Strikethrough, Resources.TextDecorationStrikethrough)
+                     .AddValue(PrintTextDecoration.Underline, Resources.TextDecorationUnderline);
 
-            EnumCache.AddValue(PrintImageStretch.None, Properties.Resources.ImageStretchNone)
-                     .AddValue(PrintImageStretch.Fill, Properties.Resources.ImageStretchFill)
-                     .AddValue(PrintImageStretch.Uniform, Properties.Resources.ImageStretchUniform);
+            EnumCache.AddValue(PrintImageStretch.None, Resources.ImageStretchNone)
+                     .AddValue(PrintImageStretch.Fill, Resources.ImageStretchFill)
+                     .AddValue(PrintImageStretch.Uniform, Resources.ImageStretchUniform);
 
-            EnumCache.AddValue(PrintImageRotation.Rotate0, Properties.Resources.RotationRotate0)
-                     .AddValue(PrintImageRotation.Rotate90, Properties.Resources.RotationRotate90)
-                     .AddValue(PrintImageRotation.Rotate180, Properties.Resources.RotationRotate180)
-                     .AddValue(PrintImageRotation.Rotate270, Properties.Resources.RotationRotate270);
+            EnumCache.AddValue(PrintImageRotation.Rotate0, Resources.RotationRotate0)
+                     .AddValue(PrintImageRotation.Rotate90, Resources.RotationRotate90)
+                     .AddValue(PrintImageRotation.Rotate180, Resources.RotationRotate180)
+                     .AddValue(PrintImageRotation.Rotate270, Resources.RotationRotate270);
 
-            EnumCache.AddValue(PrintBarcodeQrErrorCorrection.Low, Properties.Resources.PropertyEditorBarcodeQrErrorCorrectionLow)
-                     .AddValue(PrintBarcodeQrErrorCorrection.Medium, Properties.Resources.PropertyEditorBarcodeQrErrorCorrectionMedium)
-                     .AddValue(PrintBarcodeQrErrorCorrection.Quartile, Properties.Resources.PropertyEditorBarcodeQrErrorCorrectionQuartile)
-                     .AddValue(PrintBarcodeQrErrorCorrection.High, Properties.Resources.PropertyEditorBarcodeQrErrorCorrectionHigh);
+            EnumCache.AddValue(PrintBarcodeQrErrorCorrection.Low, Resources.PropertyEditorBarcodeQrErrorCorrectionLow)
+                     .AddValue(PrintBarcodeQrErrorCorrection.Medium, Resources.PropertyEditorBarcodeQrErrorCorrectionMedium)
+                     .AddValue(PrintBarcodeQrErrorCorrection.Quartile, Resources.PropertyEditorBarcodeQrErrorCorrectionQuartile)
+                     .AddValue(PrintBarcodeQrErrorCorrection.High, Resources.PropertyEditorBarcodeQrErrorCorrectionHigh);
 
-            EnumCache.AddValue(PrintSizeUnit.Pt, Properties.Resources.SizeUnitPt)
-                     .AddValue(PrintSizeUnit.Px, Properties.Resources.SizeUnitPx)
-                     .AddValue(PrintSizeUnit.In, Properties.Resources.SizeUnitIn)
-                     .AddValue(PrintSizeUnit.Cm, Properties.Resources.SizeUnitCm)
-                     .AddValue(PrintSizeUnit.Mm, Properties.Resources.SizeUnitMm);
+            EnumCache.AddValue(PrintSizeUnit.Pt, Resources.SizeUnitPt)
+                     .AddValue(PrintSizeUnit.Px, Resources.SizeUnitPx)
+                     .AddValue(PrintSizeUnit.In, Resources.SizeUnitIn)
+                     .AddValue(PrintSizeUnit.Cm, Resources.SizeUnitCm)
+                     .AddValue(PrintSizeUnit.Mm, Resources.SizeUnitMm);
         }
 
 
@@ -105,7 +107,7 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
         {
             // Common
             var commonCategory = builder.AddCommonCategory(parent);
-            builder.AddStringEditor(commonCategory, Properties.Resources.NameProperty, i => i.Name, "[a-zA-Z_]+[a-zA-Z_0-9]*");
+            builder.AddStringEditor(commonCategory, Resources.NameProperty, i => i.Name, "[a-zA-Z_]+[a-zA-Z_0-9]*");
         }
 
         public static void AddElementEditors<T>(this EditorBuilder<T> builder, PropertyEditorBase parent) where T : PrintElement
@@ -116,19 +118,19 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
             // Data
             var dataCategory = builder.AddDataCategory(parent);
             builder.AddVisibilityEditor(dataCategory, i => i.Visibility);
-            builder.AddStringEditor(dataCategory, Properties.Resources.SourceProperty, i => i.Source, @"((\$)|([0-9]+)|([a-zA-Z_]+[a-zA-Z_0-9]*)){1}(\.((\$)|([0-9]+)|([a-zA-Z_]+[a-zA-Z_0-9]*)){1})*");
-            builder.AddLongStringEditor(dataCategory, Properties.Resources.SourceExpression, i => i.Expression);
+            builder.AddStringEditor(dataCategory, Resources.SourceProperty, i => i.Source, @"((\$)|([0-9]+)|([a-zA-Z_]+[a-zA-Z_0-9]*)){1}(\.((\$)|([0-9]+)|([a-zA-Z_]+[a-zA-Z_0-9]*)){1})*");
+            builder.AddTextEditor(dataCategory, Resources.SourceExpression, i => i.Expression);
 
             // Text
             var textCategory = builder.AddTextCategory(parent);
-            builder.AddEditor(textCategory, Properties.Resources.FontProperty, i => i.Font);
+            builder.AddEditor(textCategory, Resources.FontProperty, i => i.Font);
             builder.AddTextCaseEditor(textCategory, i => i.TextCase);
 
             // Appearance
             var appearanceCategory = builder.AddAppearanceCategory(parent);
             builder.AddStyleNameEditor(appearanceCategory, i => i.Style);
-            builder.AddColorEditor(appearanceCategory, Properties.Resources.ForegroundProperty, i => i.Foreground);
-            builder.AddColorEditor(appearanceCategory, Properties.Resources.BackgroundProperty, i => i.Background);
+            builder.AddColorEditor(appearanceCategory, Resources.ForegroundProperty, i => i.Foreground);
+            builder.AddColorEditor(appearanceCategory, Resources.BackgroundProperty, i => i.Background);
         }
 
         public static void AddInlineEditors<T>(this EditorBuilder<T> builder, PropertyEditorBase parent) where T : PrintInline
@@ -152,12 +154,12 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
 
             // Appearance
             var appearanceCategory = builder.AddAppearanceCategory(parent);
-            builder.AddEditor(appearanceCategory, Properties.Resources.BorderProperty, i => i.Border);
+            builder.AddEditor(appearanceCategory, Resources.BorderProperty, i => i.Border);
 
             // Layout
             var layoutCategory = builder.AddLayoutCategory(parent);
-            builder.AddEditor(layoutCategory, Properties.Resources.MarginProperty, i => i.Margin);
-            builder.AddEditor(layoutCategory, Properties.Resources.PaddingProperty, i => i.Padding);
+            builder.AddEditor(layoutCategory, Resources.MarginProperty, i => i.Margin);
+            builder.AddEditor(layoutCategory, Resources.PaddingProperty, i => i.Padding);
         }
 
 
@@ -165,27 +167,27 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
 
         public static PropertyEditorBase AddCommonCategory<T>(this EditorBuilder<T> builder, PropertyEditorBase parent)
         {
-            return builder.AddCategory(parent, Properties.Resources.CommonCategory);
+            return builder.AddCategory(parent, Resources.CommonCategory);
         }
 
         public static PropertyEditorBase AddDataCategory<T>(this EditorBuilder<T> builder, PropertyEditorBase parent)
         {
-            return builder.AddCategory(parent, Properties.Resources.DataCategory);
+            return builder.AddCategory(parent, Resources.DataCategory);
         }
 
         public static PropertyEditorBase AddTextCategory<T>(this EditorBuilder<T> builder, PropertyEditorBase parent)
         {
-            return builder.AddCategory(parent, Properties.Resources.TextCategory);
+            return builder.AddCategory(parent, Resources.TextCategory);
         }
 
         public static PropertyEditorBase AddAppearanceCategory<T>(this EditorBuilder<T> builder, PropertyEditorBase parent)
         {
-            return builder.AddCategory(parent, Properties.Resources.AppearanceCategory);
+            return builder.AddCategory(parent, Resources.AppearanceCategory);
         }
 
         public static PropertyEditorBase AddLayoutCategory<T>(this EditorBuilder<T> builder, PropertyEditorBase parent)
         {
-            return builder.AddCategory(parent, Properties.Resources.LayoutCategory);
+            return builder.AddCategory(parent, Resources.LayoutCategory);
         }
 
 
@@ -219,7 +221,7 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
             builder.AddEditor(parent, editor, property);
         }
 
-        public static void AddLongStringEditor<T>(this EditorBuilder<T> builder, PropertyEditorBase parent, string caption, Expression<Func<T, string>> property)
+        public static void AddTextEditor<T>(this EditorBuilder<T> builder, PropertyEditorBase parent, string caption, Expression<Func<T, string>> property)
         {
             var editor = new TextEditor { Caption = caption };
 
@@ -238,29 +240,29 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
 
         private static void AddVisibilityEditor<T>(this EditorBuilder<T> builder, PropertyEditorBase parent, Expression<Func<T, PrintVisibility?>> property)
         {
-            builder.AddEnumEditor(parent, Properties.Resources.VisibilityProperty, property);
+            builder.AddEnumEditor(parent, Resources.VisibilityProperty, property);
         }
 
         public static void AddTextCaseEditor<T>(this EditorBuilder<T> builder, PropertyEditorBase parent, Expression<Func<T, PrintTextCase?>> property)
         {
-            builder.AddEnumEditor(parent, Properties.Resources.TextCaseProperty, property);
+            builder.AddEnumEditor(parent, Resources.TextCaseProperty, property);
         }
 
         public static void AddTextDecorationEditor<T>(this EditorBuilder<T> builder, PropertyEditorBase parent, Expression<Func<T, PrintTextDecoration?>> property)
         {
-            builder.AddEnumEditor(parent, Properties.Resources.TextDecorationProperty, property);
+            builder.AddEnumEditor(parent, Resources.TextDecorationProperty, property);
         }
 
         public static void AddTextAlignmentEditor<T>(this EditorBuilder<T> builder, PropertyEditorBase parent, Expression<Func<T, PrintTextAlignment?>> property)
         {
-            var editor = new TextAlignmentEditor { Caption = Properties.Resources.TextAlignmentProperty, Items = EnumCache.GetValues<PrintTextAlignment>() };
+            var editor = new TextAlignmentEditor { Caption = Resources.TextAlignmentProperty, Items = EnumCache.GetValues<PrintTextAlignment>() };
 
             builder.AddEditor(parent, editor, property);
         }
 
         public static void AddImageRotation<T>(this EditorBuilder<T> builder, PropertyEditorBase parent, Expression<Func<T, PrintImageRotation?>> property)
         {
-            var editor = new ImageRotationEditor { Caption = Properties.Resources.ImageRotationProperty, Items = EnumCache.GetValues<PrintImageRotation>() };
+            var editor = new ImageRotationEditor { Caption = Resources.ImageRotationProperty, Items = EnumCache.GetValues<PrintImageRotation>() };
 
             builder.AddEditor(parent, editor, property);
         }
@@ -277,16 +279,30 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
 
         public static void AddStyleNameEditor<T>(this EditorBuilder<T> builder, PropertyEditorBase parent, Expression<Func<T, string>> property)
         {
-            var editor = new StyleNameEditor { Caption = Properties.Resources.StyleProperty, DocumentTemplate = builder.Template };
+            var editor = new StyleNameEditor { Caption = Resources.StyleProperty, DocumentTemplate = builder.Template };
 
             builder.AddEditor(parent, editor, property);
         }
 
         public static void AddValueFormatEditor<T>(this EditorBuilder<T> builder, PropertyEditorBase parent, Expression<Func<T, ValueFormat>> property)
         {
-            var editor = new ValueFormatEditor { Caption = Properties.Resources.RunSourceFormatProperty };
+            var editor = new ValueFormatEditor { Caption = Resources.RunSourceFormatProperty };
 
             builder.AddEditor(parent, editor, property);
+        }
+
+
+        // MENU
+
+        public static void AddClearButton<T>(this EditorBuilder<T> builder, PropertyEditorBase editor)
+        {
+            var clearMenuItem = new MenuItem { Header = Resources.Clear };
+            clearMenuItem.Click += (s, e) => editor.EditValue = null;
+
+            var contextMenu = new ContextMenu();
+            contextMenu.Items.Add(clearMenuItem);
+
+            editor.ContextMenu = contextMenu;
         }
     }
 }

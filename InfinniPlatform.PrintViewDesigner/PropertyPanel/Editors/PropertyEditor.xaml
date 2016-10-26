@@ -14,7 +14,9 @@
     <UserControl.Resources>
         <Style x:Key="TreeListRowStyle"
                TargetType="{x:Type dxg:GridRowContent}"
-               BasedOn="{StaticResource {themes:GridRowThemeKey ResourceKey=RowStyle, ThemeName={x:Static dx:ThemeManager.ApplicationThemeName}}}" />
+               BasedOn="{StaticResource {themes:GridRowThemeKey ResourceKey=RowStyle, ThemeName={x:Static dx:ThemeManager.ApplicationThemeName}}}">
+            <Setter Property="ContextMenu" Value="{Binding Path=Row.ContextMenu}" />
+        </Style>
     </UserControl.Resources>
 
     <dxg:TreeListControl Name="TreeList"
@@ -27,6 +29,7 @@
                                 FixedWidth="True">
                 <dxg:TreeListColumn.CellTemplate>
                     <DataTemplate>
+                        <!-- Binding EditGridCellData -->
                         <ContentPresenter Content="{Binding Value}"
                                           ToolTip="{Binding Value}"
                                           VerticalAlignment="Top"
@@ -39,6 +42,7 @@
                                 FixedWidth="False">
                 <dxg:TreeListColumn.CellTemplate>
                     <DataTemplate>
+                        <!-- Binding EditGridCellData -->
                         <ContentPresenter Content="{Binding Value}"
                                           VerticalAlignment="Top"
                                           MinHeight="22"

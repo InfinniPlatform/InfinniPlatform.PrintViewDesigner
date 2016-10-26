@@ -14,7 +14,7 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory.Inline
 
             var dataCategory = Builder.AddDataCategory(editor);
             Builder.AddValueFormatEditor(dataCategory, i => i.SourceFormat);
-            Builder.AddLongStringEditor(dataCategory, Resources.TextProperty, i => i.Text);
+            Builder.AddTextEditor(dataCategory, Resources.TextProperty, i => i.Text);
 
             return editor;
         }

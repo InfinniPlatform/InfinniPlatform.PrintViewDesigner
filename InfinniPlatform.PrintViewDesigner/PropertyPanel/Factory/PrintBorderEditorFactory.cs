@@ -10,6 +10,8 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
         {
             var editor = new PropertyEditorBase { Caption = caption };
 
+            Builder.AddClearButton(editor);
+
             Builder.AddEditor(editor, Resources.BorderThicknessProperty, i => i.Thickness);
             Builder.AddColorEditor(editor, Resources.BorderColorProperty, i => i.Color);
 

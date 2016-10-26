@@ -23,8 +23,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Block
         {
             var headerNode = columnNode.CreateChildNode(PrintElementNodeType.PrintTableColumnHeaderNode, column);
 
-            headerNode.ElementChildrenTypes = new[] { PrintElementNodeType.PrintTableCellNode };
-
             headerNode.CanPaste = NodeBuilderHelper.CanPaste(headerNode);
             headerNode.Paste = NodeBuilderHelper.Paste(headerNode);
 
@@ -40,8 +38,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Block
         private static void BuildTableColumnCellTemplate(NodeFactory factory, PrintElementNode columnNode, PrintTableColumn column)
         {
             var cellTemplateNode = columnNode.CreateChildNode(PrintElementNodeType.PrintTableColumnCellTemplateNode, column);
-
-            cellTemplateNode.ElementChildrenTypes = new[] { PrintElementNodeType.PrintTableCellNode };
 
             cellTemplateNode.CanPaste = NodeBuilderHelper.CanPaste(cellTemplateNode);
             cellTemplateNode.Paste = NodeBuilderHelper.Paste(cellTemplateNode);

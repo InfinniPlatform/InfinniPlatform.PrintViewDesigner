@@ -10,6 +10,8 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
         {
             var editor = new ThicknessEditor { Caption = caption };
 
+            Builder.AddClearButton(editor);
+
             Builder.AddEditor(editor, editor.TopEditor, i => i.Top);
             Builder.AddEditor(editor, editor.BottomEditor, i => i.Bottom);
             Builder.AddEditor(editor, editor.LeftEditor, i => i.Left);

@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 
-using InfinniPlatform.PrintView.Model;
 using InfinniPlatform.PrintViewDesigner.Common;
 using InfinniPlatform.PrintViewDesigner.Properties;
 using InfinniPlatform.Sdk.Dynamic;
@@ -13,37 +12,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory
 {
     internal static class NodeBuilderHelper
     {
-        /// <summary>
-        /// Список типов для <see cref="PrintBlock"/>.
-        /// </summary>
-        public static readonly PrintElementNodeType[] BlockTypes =
-        {
-            PrintElementNodeType.PrintLineNode,
-            PrintElementNodeType.PrintListNode,
-            PrintElementNodeType.PrintPageBreakNode,
-            PrintElementNodeType.PrintParagraphNode,
-            PrintElementNodeType.PrintSectionNode,
-            PrintElementNodeType.PrintTableNode
-        };
-
-        /// <summary>
-        /// Список типов для <see cref="PrintInline"/>.
-        /// </summary>
-        public static readonly PrintElementNodeType[] InlineTypes =
-        {
-            PrintElementNodeType.PrintBarcodeEan13Node,
-            PrintElementNodeType.PrintBarcodeQrNode,
-            PrintElementNodeType.PrintBoldNode,
-            PrintElementNodeType.PrintHyperlinkNode,
-            PrintElementNodeType.PrintImageNode,
-            PrintElementNodeType.PrintItalicNode,
-            PrintElementNodeType.PrintLineBreakNode,
-            PrintElementNodeType.PrintRunNode,
-            PrintElementNodeType.PrintSpanNode,
-            PrintElementNodeType.PrintUnderlineNode
-        };
-
-
         /// <summary>
         /// Возвращает функцию проверки возможности помещения узла в буфер.
         /// </summary>

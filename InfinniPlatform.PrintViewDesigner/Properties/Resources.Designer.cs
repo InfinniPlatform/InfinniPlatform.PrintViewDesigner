@@ -250,6 +250,15 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        public static string Clear {
+            get {
+                return ResourceManager.GetString("Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Collapse All.
         /// </summary>
         public static string CollapseAll {

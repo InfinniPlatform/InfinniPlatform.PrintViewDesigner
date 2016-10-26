@@ -9,8 +9,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Inline
         {
             var spanNode = parentNode.CreateChildNode(PrintElementNodeType.PrintSpanNode, elementTemplate);
 
-            spanNode.ElementChildrenTypes = NodeBuilderHelper.InlineTypes;
-
             spanNode.CanCut = NodeBuilderHelper.CanCut(spanNode);
             spanNode.Cut = NodeBuilderHelper.Cut(spanNode);
 

@@ -11,6 +11,8 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Factory
         {
             var editor = new FontEditor { Caption = caption };
 
+            Builder.AddClearButton(editor);
+
             Builder.AddEditor(editor, editor.FontFamilyEditor, i => i.Family);
             Builder.AddEditor(editor, editor.FontSizeEditor, i => i.Size);
             Builder.AddEditor(editor, editor.FontSizeUnitEditor, i => i.SizeUnit);

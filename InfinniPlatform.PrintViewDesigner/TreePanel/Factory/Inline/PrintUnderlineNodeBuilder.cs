@@ -9,8 +9,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Inline
         {
             var underlineNode = parentNode.CreateChildNode(PrintElementNodeType.PrintUnderlineNode, elementTemplate);
 
-            underlineNode.ElementChildrenTypes = NodeBuilderHelper.InlineTypes;
-
             underlineNode.CanCut = NodeBuilderHelper.CanCut(underlineNode);
             underlineNode.Cut = NodeBuilderHelper.Cut(underlineNode);
 

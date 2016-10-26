@@ -828,4 +828,7 @@
   <data name="SourceJsonHasWrongFormat" xml:space="preserve">
     <value>Source JSON has wrong format: '{0}'.</value>
   </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
 </root>

@@ -154,12 +154,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory
 
 
         /// <summary>
-        /// Список допустимых типов дочерних элементов.
-        /// </summary>
-        public PrintElementNodeType[] ElementChildrenTypes { get; set; }
-
-
-        /// <summary>
         /// Проверяет возможность помещения узла в буфер.
         /// </summary>
         public Func<bool> CanCut { get; set; }

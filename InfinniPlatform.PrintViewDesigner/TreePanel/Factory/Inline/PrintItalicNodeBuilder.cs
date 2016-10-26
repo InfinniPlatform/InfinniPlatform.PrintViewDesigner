@@ -9,8 +9,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Inline
         {
             var italicNode = parentNode.CreateChildNode(PrintElementNodeType.PrintItalicNode, elementTemplate);
 
-            italicNode.ElementChildrenTypes = NodeBuilderHelper.InlineTypes;
-
             italicNode.CanCut = NodeBuilderHelper.CanCut(italicNode);
             italicNode.Cut = NodeBuilderHelper.Cut(italicNode);
 

@@ -17,8 +17,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory
         {
             var stylesNode = documentNode.CreateChildNode(PrintElementNodeType.PrintDocumentStylesNode, document);
 
-            stylesNode.ElementChildrenTypes = new[] { PrintElementNodeType.PrintStyleNode };
-
             stylesNode.CanPaste = NodeBuilderHelper.CanPaste(stylesNode);
             stylesNode.Paste = NodeBuilderHelper.Paste(stylesNode);
 
@@ -38,8 +36,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory
         private static void BuildBlocks(NodeFactory factory, PrintElementNode documentNode, PrintDocument document)
         {
             var blocksNode = documentNode.CreateChildNode(PrintElementNodeType.PrintDocumentBlocksNode, document);
-
-            blocksNode.ElementChildrenTypes = NodeBuilderHelper.BlockTypes;
 
             blocksNode.CanPaste = NodeBuilderHelper.CanPaste(blocksNode);
             blocksNode.Paste = NodeBuilderHelper.Paste(blocksNode);

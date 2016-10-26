@@ -30,8 +30,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Block
         {
             var columnsNode = tableNode.CreateChildNode(PrintElementNodeType.PrintTableColumnsNode, table);
 
-            columnsNode.ElementChildrenTypes = new [] { PrintElementNodeType.PrintTableColumnNode };
-
             columnsNode.CanPaste = NodeBuilderHelper.CanPaste(columnsNode);
             columnsNode.Paste = NodeBuilderHelper.Paste(columnsNode);
 
@@ -162,8 +160,6 @@ namespace InfinniPlatform.PrintViewDesigner.TreePanel.Factory.Block
         private static void BuildTableRows(NodeFactory factory, PrintElementNode tableNode, PrintTable table)
         {
             var rowsNode = tableNode.CreateChildNode(PrintElementNodeType.PrintTableRowsNode, table);
-
-            rowsNode.ElementChildrenTypes = new [] { PrintElementNodeType.PrintTableRowNode };
 
             rowsNode.CanInsertChild = NodeBuilderHelper.CanInsertChild<PrintTable, PrintTableRow>(rowsNode);
             rowsNode.InsertChild = InsertTableRow(factory, rowsNode);
