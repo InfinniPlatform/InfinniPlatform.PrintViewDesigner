@@ -31,6 +31,8 @@
                       HorizontalContentAlignment="Left"
                       VerticalScrollBarVisibility="Auto"
                       HorizontalScrollBarVisibility="Auto"
+                      AcceptsReturn="True"
+                      AcceptsTab="True"
                       EditValue="123"
                       />
         

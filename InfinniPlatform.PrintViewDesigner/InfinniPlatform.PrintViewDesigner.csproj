@@ -84,12 +84,12 @@
     <Reference Include="DevExpress.Xpf.Themes.MetropolisLight.v13.2">
       <HintPath>..\.files\DevExpress.Xpf\DevExpress.Xpf.Themes.MetropolisLight.v13.2.dll</HintPath>
     </Reference>
-    <Reference Include="InfinniPlatform.PrintView, Version=1.11.0.1182, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\InfinniPlatform.PrintView.1.11.0.1182-master\lib\net452\InfinniPlatform.PrintView.dll</HintPath>
+    <Reference Include="InfinniPlatform.PrintView, Version=1.11.0.1183, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InfinniPlatform.PrintView.1.11.0.1183-master\lib\net452\InfinniPlatform.PrintView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="InfinniPlatform.Sdk, Version=1.11.0.1182, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\InfinniPlatform.Sdk.1.11.0.1182-master\lib\net452\InfinniPlatform.Sdk.dll</HintPath>
+    <Reference Include="InfinniPlatform.Sdk, Version=1.11.0.1183, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InfinniPlatform.Sdk.1.11.0.1183-master\lib\net452\InfinniPlatform.Sdk.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
