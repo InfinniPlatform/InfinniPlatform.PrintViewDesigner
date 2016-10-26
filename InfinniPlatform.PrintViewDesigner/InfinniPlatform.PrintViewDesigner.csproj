@@ -50,6 +50,9 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Common\App.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v13.2">
       <HintPath>..\.files\DevExpress.Xpf\DevExpress.Data.v13.2.dll</HintPath>
@@ -470,6 +473,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Install.bat" />
     <None Include="Install.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -595,6 +599,9 @@
   <ItemGroup>
     <Resource Include="Images\Common\PreviewHtml.png" />
     <Resource Include="Images\Common\PreviewPdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Common\App.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

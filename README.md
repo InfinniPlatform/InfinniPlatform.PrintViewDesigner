@@ -10,10 +10,29 @@ http://nuget.infinnity.ru/packages/InfinniPlatform.PrintViewDesigner/
 
 # Installation
 
+Download a Windows installation script InfinniPlatform.PrintViewDesigner [here](https://raw.githubusercontent.com/InfinniPlatform/InfinniPlatform.PrintViewDesigner/master/InfinniPlatform.PrintViewDesigner/Install.bat).
+
+The latest version is installed by default:
+
 ```bash
-set VERSION=1.0.0.5-master
-nuget install "InfinniPlatform.PrintViewDesigner" -Version %VERSION% -OutputDirectory "packages" -NonInteractive -Prerelease -Source "http://nuget.org/api/v2;http://nuget.infinnity.ru/api/v2"
-powershell -NoProfile -ExecutionPolicy Bypass -Command ".\packages\Infinni.Node.%VERSION%\lib\net45\Install.ps1"
-rd /s /q packages
-cd InfinniPlatform.PrintViewDesigner.%VERSION%
+Install.bat # installs the latest version of InfinniPlatform.PrintViewDesigner
+```
+
+You can install any version of editor from the repository:
+
+```bash
+Install.bat <version> # installs specified version of InfinniPlatform.PrintViewDesigner
+```
+
+When script finishes InfinniPlatform.PrintViewDesigner will be placed into the folder `InfinniPlatform.PrintViewDesigner.X` (where `X` - version number)
+in the same folder where script was run. Change folder as in example below:
+
+```bash
+InfinniPlatform.PrintViewDesigner.X
+```
+
+Run editor:
+
+```bash
+InfinniPlatform.PrintViewDesigner.exe
 ```

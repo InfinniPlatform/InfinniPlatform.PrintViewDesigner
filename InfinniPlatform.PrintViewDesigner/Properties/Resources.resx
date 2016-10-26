@@ -286,7 +286,7 @@
     <value>Paste</value>
   </data>
   <data name="PrintViewDesignerName" xml:space="preserve">
-    <value>PrintView</value>
+    <value>InfinniPlatform PrintView Designer</value>
   </data>
   <data name="DeleteElementQuestion" xml:space="preserve">
     <value>Delete element '{0}'?</value>

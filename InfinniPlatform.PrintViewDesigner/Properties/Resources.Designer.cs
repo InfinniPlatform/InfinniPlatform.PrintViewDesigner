@@ -1438,7 +1438,7 @@ namespace InfinniPlatform.PrintViewDesigner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PrintView.
+        ///   Looks up a localized string similar to InfinniPlatform PrintView Designer.
         /// </summary>
         public static string PrintViewDesignerName {
             get {
