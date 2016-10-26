@@ -65,12 +65,14 @@ Write-Host "Install InfinniPlatform.PrintViewDesigner.$version"
 
 Write-Host "Copy files"
 
+$binDir = Join-Path "$outputDir" 'bin'
+
 $projectRefs = (Get-ChildItem -Path 'packages' -Filter 'InfinniPlatform.PrintViewDesigner.references' -Recurse | Select-Object -First 1)
 
 Get-Content $projectRefs.FullName | Foreach-Object {
     if ($_ -match '^.*?\\lib(\\.*?){0,1}\\(?<path>.*?)$')
     {
-        $item = Join-Path (Join-Path "$outputDir" 'bin') $matches.path
+        $item = Join-Path $binDir $matches.path
 
         $itemParent = Split-Path $item
 
@@ -82,8 +84,10 @@ Get-Content $projectRefs.FullName | Foreach-Object {
         Copy-Item -Path (Join-Path 'packages' $_) -Destination $item -Recurse -ErrorAction SilentlyContinue
     }
 }
-    
+
 Copy-Item -Path (Join-Path $projectRefs.Directory.FullName "*") -Destination $outputDir -Exclude @( '*.ps1', '*references' ) -Recurse -ErrorAction SilentlyContinue
+
+Move-Item -Path (Join-Path $outputDir '*.dll') -Destination $binDir
 
 # Remove temp files
 
