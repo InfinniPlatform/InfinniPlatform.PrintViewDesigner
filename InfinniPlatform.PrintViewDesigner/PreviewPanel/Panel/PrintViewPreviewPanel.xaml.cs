@@ -27,6 +27,8 @@ namespace InfinniPlatform.PrintViewDesigner.PreviewPanel.Panel
     /// </summary>
     public partial class PrintViewPreviewPanel : UserControl
     {
+        private const string TempDirectoryName = "temp";
+
         private static readonly SolidColorBrush HighlightElementBrush
             = new SolidColorBrush(SystemColors.HighlightColor) { Opacity = 0.4 };
 
@@ -344,7 +346,12 @@ namespace InfinniPlatform.PrintViewDesigner.PreviewPanel.Panel
             {
                 try
                 {
-                    var documentPath = $"PrintView.{Guid.NewGuid():N}.{fileFormat}";
+                    if (!Directory.Exists(TempDirectoryName))
+                    {
+                        Directory.CreateDirectory(TempDirectoryName);
+                    }
+                    
+                    var documentPath = Path.Combine(TempDirectoryName, $"PrintView.{Guid.NewGuid():N}.{fileFormat}");
 
                     using (var documentStream = File.Create(documentPath))
                     {
@@ -358,17 +365,6 @@ namespace InfinniPlatform.PrintViewDesigner.PreviewPanel.Panel
                     if (previewProcess != null)
                     {
                         previewProcess.EnableRaisingEvents = true;
-
-                        previewProcess.Exited += (s, e) =>
-                                                 {
-                                                     try
-                                                     {
-                                                         File.Delete(documentPath);
-                                                     }
-                                                     catch
-                                                     {
-                                                     }
-                                                 };
                     }
                 }
                 catch (Exception error)
