@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Documents;
 
@@ -26,18 +27,32 @@ namespace InfinniPlatform.PrintViewDesigner.PreviewPanel.Factory.Block
                 flowElement.Columns.Add(flowColumn);
             }
 
-            foreach (var row in element.Rows)
+            var ignoredCells = new List<CellCoordinate>();
+
+            for (var i = 0; i < element.Rows.Count; i++)
             {
                 var flowRow = new TableRow();
 
-                ApplyRowStyles(flowRow, row);
+                ApplyRowStyles(flowRow, element.Rows[i]);
 
                 var colSpansCount = 0;
 
-                foreach (var cell in row.Cells)
+                for (var j = 0; j < element.Rows[i].Cells.Count; j++)
                 {
-                    var cellColumnSpan = Math.Max(cell.ColumnSpan ?? 1, 1);
-                    var cellRowSpan = Math.Max(cell.RowSpan ?? 1, 1);
+                    var cellIndex = new CellCoordinate(i, j);
+
+                    if (ignoredCells.Contains(cellIndex))
+                    {
+                        continue;
+                    }
+
+                    var cellColumnSpan = Math.Max(element.Rows[i].Cells[j].ColumnSpan ?? 1, 1);
+                    var cellRowSpan = Math.Max(element.Rows[i].Cells[j].RowSpan ?? 1, 1);
+
+                    if (cellRowSpan > 1)
+                    {
+                        AddIgnoredCells(ignoredCells, cellIndex, cellRowSpan);
+                    }
 
                     colSpansCount += cellColumnSpan;
 
@@ -48,26 +63,39 @@ namespace InfinniPlatform.PrintViewDesigner.PreviewPanel.Factory.Block
 
                     var flowCell = new TableCell { ColumnSpan = Math.Max(cellColumnSpan, 1), RowSpan = Math.Max(cellRowSpan, 1) };
 
-                    ApplyCellStyles(flowCell, cell);
+                    ApplyCellStyles(flowCell, element.Rows[i].Cells[j]);
 
-                    var flowCellContent = context.Build<BlockElement>(cell.Block, documentMap);
+                    var flowCellContent = context.Build<BlockElement>(element.Rows[i].Cells[j].Block, documentMap);
 
                     if (flowCellContent != null)
                     {
                         flowCell.Blocks.Add(flowCellContent);
                     }
 
-                    documentMap.RemapElement(cell, flowCell);
+                    documentMap.RemapElement(element.Rows[i].Cells[j], flowCell);
 
                     flowRow.Cells.Add(flowCell);
                 }
 
-                documentMap.RemapElement(row, flowRow);
+                documentMap.RemapElement(element.Rows[i], flowRow);
 
                 flowElement.RowGroups[0].Rows.Add(flowRow);
             }
 
             return flowElement;
+        }
+
+        private static void AddIgnoredCells(ICollection<CellCoordinate> ignoredCells, CellCoordinate currentCellCoordinate, int? rowSpan)
+        {
+            if (rowSpan == null)
+            {
+                return;
+            }
+
+            for (var i = 1; i < rowSpan.Value; i++)
+            {
+                ignoredCells.Add(new CellCoordinate(currentCellCoordinate.Row + i, currentCellCoordinate.Column));
+            }
         }
 
 

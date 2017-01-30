@@ -143,6 +143,7 @@
     <Compile Include="..\.files\Packaging\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="PreviewPanel\Factory\Block\CellCoordinate.cs" />
     <Compile Include="PreviewPanel\Panel\JsonValueConverter.cs" />
     <Compile Include="PreviewPanel\Panel\PrintViewPreviewDataDialog.xaml.cs">
       <DependentUpon>PrintViewPreviewDataDialog.xaml</DependentUpon>
