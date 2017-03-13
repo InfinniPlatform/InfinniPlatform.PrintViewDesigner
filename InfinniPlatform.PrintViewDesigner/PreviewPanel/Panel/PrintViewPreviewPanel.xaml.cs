@@ -62,7 +62,7 @@ namespace InfinniPlatform.PrintViewDesigner.PreviewPanel.Panel
         {
             var result = new PrintViewWriter();
 
-            var settings = PrintViewSettings.Default;
+            var settings = HtmlToPdfSettings.Default;
 
             var htmlWriter = new HtmlPrintDocumentWriter();
             var pdfWriter = new PdfPrintDocumentWriter(settings, htmlWriter);
