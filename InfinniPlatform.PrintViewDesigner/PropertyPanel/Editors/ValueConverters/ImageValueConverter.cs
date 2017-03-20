@@ -6,27 +6,18 @@ using System.Windows.Media.Imaging;
 
 namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.ValueConverters
 {
-    [ValueConversion(typeof (object), typeof (BitmapImage))]
+    [ValueConversion(typeof(object), typeof(BitmapImage))]
     internal class ImageValueConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             BitmapImage result = null;
+
             byte[] bytes = null;
 
             if (value is byte[])
             {
-                bytes = (byte[]) value;
-            }
-            else if (value is string)
-            {
-                try
-                {
-                    bytes = System.Convert.FromBase64String((string) value);
-                }
-                catch
-                {
-                }
+                bytes = (byte[])value;
             }
 
             if (bytes != null)
@@ -50,12 +41,11 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.ValueConverter
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            string result = null;
             byte[] bytes = null;
 
             if (value is BitmapImage)
             {
-                var image = (BitmapImage) value;
+                var image = (BitmapImage)value;
                 var encoder = new PngBitmapEncoder();
                 encoder.Frames.Add(BitmapFrame.Create(image));
 
@@ -65,19 +55,12 @@ namespace InfinniPlatform.PrintViewDesigner.PropertyPanel.Editors.ValueConverter
                     bytes = stream.ToArray();
                 }
             }
-
-            if (bytes != null)
+            else if (value is byte[])
             {
-                try
-                {
-                    result = System.Convert.ToBase64String(bytes);
-                }
-                catch
-                {
-                }
+                bytes = (byte[])value;
             }
 
-            return result;
+            return bytes;
         }
     }
 }
